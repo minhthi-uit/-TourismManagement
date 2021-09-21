@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TourismManagement
 {
-    public partial class Form1 : Form
+    public partial class SinIn : Form
     {
-        public Form1()
+        public SinIn()
         {
             InitializeComponent();
         }

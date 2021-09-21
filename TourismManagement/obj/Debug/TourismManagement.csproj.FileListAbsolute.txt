@@ -1,0 +1,11 @@
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\bin\Debug\TourismManagement.exe.config
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\bin\Debug\TourismManagement.exe
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\bin\Debug\TourismManagement.pdb
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.Properties.Resources.resources
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.exe
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.pdb
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.CustomerManagement.resources
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.SinIn.resources
