@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApartmentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApartmentManagement.Designer.cs">
+      <DependentUpon>ApartmentManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerManagement.Designer.cs">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayApartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayApartment.Designer.cs">
+      <DependentUpon>PayApartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RentApartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentApartment.Designer.cs">
+      <DependentUpon>RentApartment.cs</DependentUpon>
     </Compile>
     <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
@@ -60,8 +78,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ApartmentManagement.resx">
+      <DependentUpon>ApartmentManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayApartment.resx">
+      <DependentUpon>PayApartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +97,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RentApartment.resx">
+      <DependentUpon>RentApartment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>

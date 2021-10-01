@@ -31,7 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbSex = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.dtpDayOfBirth = new System.Windows.Forms.DateTimePicker();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.cbNationality = new System.Windows.Forms.ComboBox();
             this.txtIdentityCard = new System.Windows.Forms.TextBox();
@@ -46,7 +46,8 @@
             this.dgvListOfCustomer = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnExport = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearchIdentityCard = new System.Windows.Forms.TextBox();
             this.txtSearchName = new System.Windows.Forms.TextBox();
@@ -64,7 +65,7 @@
             // 
             this.groupBox1.Controls.Add(this.cbSex);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.dtpBirthday);
+            this.groupBox1.Controls.Add(this.dtpDayOfBirth);
             this.groupBox1.Controls.Add(this.txtPhoneNumber);
             this.groupBox1.Controls.Add(this.cbNationality);
             this.groupBox1.Controls.Add(this.txtIdentityCard);
@@ -100,12 +101,13 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Sex";
             // 
-            // dtpBirthday
+            // dtpDayOfBirth
             // 
-            this.dtpBirthday.Location = new System.Drawing.Point(261, 150);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(200, 22);
-            this.dtpBirthday.TabIndex = 11;
+            this.dtpDayOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDayOfBirth.Location = new System.Drawing.Point(261, 150);
+            this.dtpDayOfBirth.Name = "dtpDayOfBirth";
+            this.dtpDayOfBirth.Size = new System.Drawing.Size(200, 22);
+            this.dtpDayOfBirth.TabIndex = 11;
             // 
             // txtPhoneNumber
             // 
@@ -226,7 +228,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnExport);
+            this.groupBox2.Controls.Add(this.btnDelete);
+            this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.txtSearchIdentityCard);
             this.groupBox2.Controls.Add(this.txtSearchName);
@@ -240,14 +243,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "function";
             // 
-            // btnExport
+            // btnDelete
             // 
-            this.btnExport.Location = new System.Drawing.Point(33, 182);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(125, 39);
-            this.btnExport.TabIndex = 7;
-            this.btnExport.Text = "Export file Excel";
-            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(157, 182);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 40);
+            this.btnDelete.TabIndex = 8;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(157, 119);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 39);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnSearch
             // 
@@ -283,7 +295,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(166, 119);
+            this.btnUpdate.Location = new System.Drawing.Point(33, 182);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 40);
             this.btnUpdate.TabIndex = 1;
@@ -335,7 +347,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvListOfCustomer;
-        private System.Windows.Forms.DateTimePicker dtpBirthday;
+        private System.Windows.Forms.DateTimePicker dtpDayOfBirth;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.ComboBox cbNationality;
         private System.Windows.Forms.TextBox txtIdentityCard;
@@ -356,8 +368,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cbSex;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
