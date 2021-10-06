@@ -16,5 +16,10 @@ namespace TourismManagement
         {
             InitializeComponent();
         }
+
+        private void lblKhachSan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
