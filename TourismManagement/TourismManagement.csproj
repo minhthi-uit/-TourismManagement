@@ -52,6 +52,12 @@
     <Compile Include="ApartmentManagement.Designer.cs">
       <DependentUpon>ApartmentManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="BillManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillManagement.Designer.cs">
+      <DependentUpon>BillManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ApartmentManagement.resx">
       <DependentUpon>ApartmentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillManagement.resx">
+      <DependentUpon>BillManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>

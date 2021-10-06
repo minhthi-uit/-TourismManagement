@@ -12,3 +12,4 @@ C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManag
 C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.ApartmentManagement.resources
 C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.RentApartment.resources
 C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.PayApartment.resources
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.BillManagement.resources
