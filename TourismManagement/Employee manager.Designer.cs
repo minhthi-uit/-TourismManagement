@@ -32,25 +32,25 @@ namespace TourismManagement
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee_manager));
             this.btnTroVeCuaQLNV = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnXoaCuaCTPP = new System.Windows.Forms.Button();
-            this.btnThemCuaCTPP = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAcessRights = new System.Windows.Forms.ComboBox();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
+            this.txtCurrentPass = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtDisplayName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvListOfEmployee = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListOfEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTroVeCuaQLNV
@@ -69,9 +69,9 @@ namespace TourismManagement
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.btnXoaCuaCTPP);
-            this.groupBox1.Controls.Add(this.btnThemCuaCTPP);
+            this.groupBox1.Controls.Add(this.btnUpdate);
+            this.groupBox1.Controls.Add(this.btnDelete);
+            this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Location = new System.Drawing.Point(21, 401);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(373, 135);
@@ -79,60 +79,60 @@ namespace TourismManagement
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Function";
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(208, 22);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 46);
-            this.button1.TabIndex = 130;
-            this.button1.Text = "Update";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(208, 22);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(112, 46);
+            this.btnUpdate.TabIndex = 130;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
-            // btnXoaCuaCTPP
+            // btnDelete
             // 
-            this.btnXoaCuaCTPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnXoaCuaCTPP.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaCuaCTPP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaCuaCTPP.Image")));
-            this.btnXoaCuaCTPP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaCuaCTPP.Location = new System.Drawing.Point(114, 82);
-            this.btnXoaCuaCTPP.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoaCuaCTPP.Name = "btnXoaCuaCTPP";
-            this.btnXoaCuaCTPP.Size = new System.Drawing.Size(112, 46);
-            this.btnXoaCuaCTPP.TabIndex = 129;
-            this.btnXoaCuaCTPP.Text = "Delete";
-            this.btnXoaCuaCTPP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXoaCuaCTPP.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDelete.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(114, 82);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(112, 46);
+            this.btnDelete.TabIndex = 129;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // btnThemCuaCTPP
+            // btnAdd
             // 
-            this.btnThemCuaCTPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnThemCuaCTPP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThemCuaCTPP.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemCuaCTPP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemCuaCTPP.Image")));
-            this.btnThemCuaCTPP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemCuaCTPP.Location = new System.Drawing.Point(16, 28);
-            this.btnThemCuaCTPP.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThemCuaCTPP.Name = "btnThemCuaCTPP";
-            this.btnThemCuaCTPP.Size = new System.Drawing.Size(112, 46);
-            this.btnThemCuaCTPP.TabIndex = 125;
-            this.btnThemCuaCTPP.Text = "Add";
-            this.btnThemCuaCTPP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThemCuaCTPP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThemCuaCTPP.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(16, 28);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(112, 46);
+            this.btnAdd.TabIndex = 125;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtAcessRights);
+            this.groupBox2.Controls.Add(this.txtNewPass);
+            this.groupBox2.Controls.Add(this.txtCurrentPass);
+            this.groupBox2.Controls.Add(this.txtUsername);
+            this.groupBox2.Controls.Add(this.txtDisplayName);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
@@ -145,46 +145,46 @@ namespace TourismManagement
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Information";
             // 
-            // comboBox1
+            // txtAcessRights
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(168, 230);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 26);
-            this.comboBox1.TabIndex = 9;
+            this.txtAcessRights.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAcessRights.FormattingEnabled = true;
+            this.txtAcessRights.Location = new System.Drawing.Point(168, 230);
+            this.txtAcessRights.Name = "txtAcessRights";
+            this.txtAcessRights.Size = new System.Drawing.Size(188, 26);
+            this.txtAcessRights.TabIndex = 9;
             // 
-            // textBox4
+            // txtNewPass
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(168, 180);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 24);
-            this.textBox4.TabIndex = 8;
+            this.txtNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Location = new System.Drawing.Point(168, 180);
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.Size = new System.Drawing.Size(188, 24);
+            this.txtNewPass.TabIndex = 8;
             // 
-            // textBox3
+            // txtCurrentPass
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(168, 129);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 24);
-            this.textBox3.TabIndex = 7;
+            this.txtCurrentPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrentPass.Location = new System.Drawing.Point(168, 129);
+            this.txtCurrentPass.Name = "txtCurrentPass";
+            this.txtCurrentPass.Size = new System.Drawing.Size(188, 24);
+            this.txtCurrentPass.TabIndex = 7;
             // 
-            // textBox2
+            // txtUsername
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(168, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 24);
-            this.textBox2.TabIndex = 6;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(168, 81);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(188, 24);
+            this.txtUsername.TabIndex = 6;
             // 
-            // textBox1
+            // txtDisplayName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(168, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 24);
-            this.textBox1.TabIndex = 5;
+            this.txtDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplayName.Location = new System.Drawing.Point(168, 37);
+            this.txtDisplayName.Name = "txtDisplayName";
+            this.txtDisplayName.Size = new System.Drawing.Size(188, 24);
+            this.txtDisplayName.TabIndex = 5;
             // 
             // label6
             // 
@@ -246,23 +246,23 @@ namespace TourismManagement
             this.label2.TabIndex = 33;
             this.label2.Text = "EMPLOYEE MANAGEMENT";
             // 
-            // dataGridView1
+            // dgvListOfEmployee
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(416, 133);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(432, 403);
-            this.dataGridView1.TabIndex = 34;
+            this.dgvListOfEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvListOfEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListOfEmployee.Location = new System.Drawing.Point(416, 133);
+            this.dgvListOfEmployee.Name = "dgvListOfEmployee";
+            this.dgvListOfEmployee.RowHeadersWidth = 51;
+            this.dgvListOfEmployee.RowTemplate.Height = 24;
+            this.dgvListOfEmployee.Size = new System.Drawing.Size(432, 403);
+            this.dgvListOfEmployee.TabIndex = 34;
             // 
             // Employee_manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 592);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListOfEmployee);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -274,7 +274,7 @@ namespace TourismManagement
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListOfEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,17 +287,17 @@ namespace TourismManagement
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgvListOfEmployee;
+        private System.Windows.Forms.TextBox txtDisplayName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button btnThemCuaCTPP;
-        private System.Windows.Forms.Button btnXoaCuaCTPP;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox txtAcessRights;
+        private System.Windows.Forms.TextBox txtNewPass;
+        private System.Windows.Forms.TextBox txtCurrentPass;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

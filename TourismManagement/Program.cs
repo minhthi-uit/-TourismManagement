@@ -16,7 +16,7 @@ namespace TourismManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home_screen());
+            Application.Run(new Service());
         }
     }
 }

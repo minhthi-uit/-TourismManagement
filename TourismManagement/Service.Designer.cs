@@ -30,16 +30,11 @@ namespace TourismManagement
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Service));
-            this.cmbNhanVien = new System.Windows.Forms.ComboBox();
-            this.lblChiTietTongTien = new System.Windows.Forms.Label();
-            this.lblNhanVien = new System.Windows.Forms.Label();
-            this.lblTongTien = new System.Windows.Forms.Label();
-            this.lblKhachHang = new System.Windows.Forms.Label();
+           
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvListOfServices = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
-            this.lblChiTietPP = new System.Windows.Forms.Label();
             this.dgvRegisterService = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,68 +51,9 @@ namespace TourismManagement
             ((System.ComponentModel.ISupportInitialize)(this.dgvListOfServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegisterService)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cmbNhanVien
-            // 
-            this.cmbNhanVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbNhanVien.FormattingEnabled = true;
-            this.cmbNhanVien.Items.AddRange(new object[] {
-            "Standard",
-            "Superior",
-            "Deluxe"});
-            this.cmbNhanVien.Location = new System.Drawing.Point(988, 837);
-            this.cmbNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbNhanVien.Name = "cmbNhanVien";
-            this.cmbNhanVien.Size = new System.Drawing.Size(197, 24);
-            this.cmbNhanVien.TabIndex = 142;
-            // 
-            // lblChiTietTongTien
-            // 
-            this.lblChiTietTongTien.AutoSize = true;
-            this.lblChiTietTongTien.BackColor = System.Drawing.Color.Transparent;
-            this.lblChiTietTongTien.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChiTietTongTien.Location = new System.Drawing.Point(860, 799);
-            this.lblChiTietTongTien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblChiTietTongTien.Name = "lblChiTietTongTien";
-            this.lblChiTietTongTien.Size = new System.Drawing.Size(16, 19);
-            this.lblChiTietTongTien.TabIndex = 140;
-            this.lblChiTietTongTien.Text = "0";
-            // 
-            // lblNhanVien
-            // 
-            this.lblNhanVien.AutoSize = true;
-            this.lblNhanVien.BackColor = System.Drawing.Color.Transparent;
-            this.lblNhanVien.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNhanVien.Location = new System.Drawing.Point(860, 843);
-            this.lblNhanVien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNhanVien.Name = "lblNhanVien";
-            this.lblNhanVien.Size = new System.Drawing.Size(39, 19);
-            this.lblNhanVien.TabIndex = 134;
-            this.lblNhanVien.Text = "Staff";
-            // 
-            // lblTongTien
-            // 
-            this.lblTongTien.AutoSize = true;
-            this.lblTongTien.BackColor = System.Drawing.Color.Transparent;
-            this.lblTongTien.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.Location = new System.Drawing.Point(747, 799);
-            this.lblTongTien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(89, 19);
-            this.lblTongTien.TabIndex = 133;
-            this.lblTongTien.Text = "Into Money:";
-            // 
-            // lblKhachHang
-            // 
-            this.lblKhachHang.AutoSize = true;
-            this.lblKhachHang.BackColor = System.Drawing.Color.Transparent;
-            this.lblKhachHang.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKhachHang.Location = new System.Drawing.Point(160, 799);
-            this.lblKhachHang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblKhachHang.Name = "lblKhachHang";
-            this.lblKhachHang.Size = new System.Drawing.Size(72, 19);
-            this.lblKhachHang.TabIndex = 132;
-            this.lblKhachHang.Text = "Customer";
+            
+           
+          
             // 
             // btnPrint
             // 
@@ -127,7 +63,7 @@ namespace TourismManagement
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrint.Location = new System.Drawing.Point(954, 236);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(112, 35);
             this.btnPrint.TabIndex = 131;
@@ -142,7 +78,7 @@ namespace TourismManagement
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(955, 126);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(112, 44);
             this.btnDelete.TabIndex = 128;
@@ -157,7 +93,7 @@ namespace TourismManagement
             this.dgvListOfServices.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvListOfServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListOfServices.Location = new System.Drawing.Point(13, 71);
-            this.dgvListOfServices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvListOfServices.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListOfServices.Name = "dgvListOfServices";
             this.dgvListOfServices.RowHeadersVisible = false;
             this.dgvListOfServices.RowHeadersWidth = 51;
@@ -172,25 +108,14 @@ namespace TourismManagement
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBack.Location = new System.Drawing.Point(83, 6);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(128, 44);
             this.btnBack.TabIndex = 103;
             this.btnBack.Text = "Back";
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBack.UseVisualStyleBackColor = false;
-            // 
-            // lblChiTietPP
-            // 
-            this.lblChiTietPP.AutoSize = true;
-            this.lblChiTietPP.BackColor = System.Drawing.Color.Transparent;
-            this.lblChiTietPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChiTietPP.Location = new System.Drawing.Point(437, 6);
-            this.lblChiTietPP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblChiTietPP.Name = "lblChiTietPP";
-            this.lblChiTietPP.Size = new System.Drawing.Size(138, 32);
-            this.lblChiTietPP.TabIndex = 104;
-            this.lblChiTietPP.Text = "SERVICE";
+           
             // 
             // dgvRegisterService
             // 
@@ -345,17 +270,11 @@ namespace TourismManagement
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvRegisterService);
-            this.Controls.Add(this.cmbNhanVien);
-            this.Controls.Add(this.lblChiTietTongTien);
-            this.Controls.Add(this.lblNhanVien);
-            this.Controls.Add(this.lblTongTien);
-            this.Controls.Add(this.lblKhachHang);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgvListOfServices);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.lblChiTietPP);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Service";
             this.Text = "Service";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListOfServices)).EndInit();
@@ -367,16 +286,15 @@ namespace TourismManagement
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbNhanVien;
-        private System.Windows.Forms.Label lblChiTietTongTien;
-        private System.Windows.Forms.Label lblNhanVien;
-        private System.Windows.Forms.Label lblTongTien;
-        private System.Windows.Forms.Label lblKhachHang;
+        
+       
+       
+       
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvListOfServices;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label lblChiTietPP;
+       
         private System.Windows.Forms.DataGridView dgvRegisterService;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
