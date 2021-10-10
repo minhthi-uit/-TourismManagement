@@ -64,6 +64,24 @@
     <Compile Include="CustomerManagement.Designer.cs">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee manager.Designer.cs">
+      <DependentUpon>Employee manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home screen.Designer.cs">
+      <DependentUpon>Home screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales report.Designer.cs">
+      <DependentUpon>Sales report.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayApartment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +94,12 @@
     <Compile Include="RentApartment.Designer.cs">
       <DependentUpon>RentApartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service.Designer.cs">
+      <DependentUpon>Service.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +108,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ApartmentManagement.resx">
       <DependentUpon>ApartmentManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +122,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee manager.resx">
+      <DependentUpon>Employee manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home screen.resx">
+      <DependentUpon>Home screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales report.resx">
+      <DependentUpon>Sales report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayApartment.resx">
       <DependentUpon>PayApartment.cs</DependentUpon>
@@ -109,8 +148,14 @@
     <EmbeddedResource Include="RentApartment.resx">
       <DependentUpon>RentApartment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Service.resx">
+      <DependentUpon>Service.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

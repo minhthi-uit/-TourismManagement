@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayApartment));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,28 +43,35 @@
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.SearchNameCustomer = new System.Windows.Forms.TextBox();
+            this.SearchIdentityCard = new System.Windows.Forms.TextBox();
+            this.txtSerchIDRental = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnPay = new System.Windows.Forms.Button();
-            this.btnCreateBill = new System.Windows.Forms.Button();
-            this.txtSerchIDRental = new System.Windows.Forms.TextBox();
-            this.SearchIdentityCard = new System.Windows.Forms.TextBox();
-            this.SearchNameCustomer = new System.Windows.Forms.TextBox();
             this.txtIDRental = new System.Windows.Forms.TextBox();
             this.txtIDCustomer = new System.Windows.Forms.TextBox();
             this.txtNameCustomer = new System.Windows.Forms.TextBox();
             this.txtIdentityCard = new System.Windows.Forms.TextBox();
             this.txtNameApartment = new System.Windows.Forms.TextBox();
             this.txtType = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.txtToTal = new System.Windows.Forms.TextBox();
             this.txtNumberDay = new System.Windows.Forms.TextBox();
             this.dtpDayOfHire = new System.Windows.Forms.DateTimePicker();
             this.dtbPaymentDay = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtServiceFee = new System.Windows.Forms.TextBox();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtApartmentMoney = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(580, 404);
+            this.label3.Location = new System.Drawing.Point(266, 505);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 2;
@@ -106,7 +114,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(580, 451);
+            this.label5.Location = new System.Drawing.Point(266, 556);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 17);
             this.label5.TabIndex = 4;
@@ -115,7 +123,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(266, 407);
+            this.label6.Location = new System.Drawing.Point(10, 556);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 17);
             this.label6.TabIndex = 5;
@@ -124,7 +132,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(266, 454);
+            this.label7.Location = new System.Drawing.Point(266, 412);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 17);
             this.label7.TabIndex = 6;
@@ -142,16 +150,16 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(584, 502);
+            this.label9.Location = new System.Drawing.Point(571, 415);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 17);
+            this.label9.Size = new System.Drawing.Size(44, 17);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Price";
+            this.label9.Text = " Price";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(266, 502);
+            this.label10.Location = new System.Drawing.Point(266, 456);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(128, 17);
             this.label10.TabIndex = 9;
@@ -160,16 +168,16 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(834, 409);
+            this.label11.Location = new System.Drawing.Point(571, 459);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(162, 17);
+            this.label11.Size = new System.Drawing.Size(93, 17);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Number Of Rental Days ";
+            this.label11.Text = " Rental Days ";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(834, 454);
+            this.label12.Location = new System.Drawing.Point(575, 602);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 17);
             this.label12.TabIndex = 11;
@@ -177,90 +185,41 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.SearchNameCustomer);
             this.groupBox1.Controls.Add(this.SearchIdentityCard);
             this.groupBox1.Controls.Add(this.txtSerchIDRental);
-            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Location = new System.Drawing.Point(12, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1122, 86);
+            this.groupBox1.Size = new System.Drawing.Size(1312, 86);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search Rental Voucher";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(496, 52);
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(623, 44);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(116, 28);
-            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Size = new System.Drawing.Size(93, 32);
+            this.btnSearch.TabIndex = 132;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // label15
+            // SearchNameCustomer
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(113, 58);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 17);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Identity Card";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(493, 18);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(109, 17);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Name Customer";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(113, 18);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 17);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "ID Rental";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 138);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1122, 241);
-            this.dataGridView1.TabIndex = 13;
-            // 
-            // btnPay
-            // 
-            this.btnPay.Location = new System.Drawing.Point(113, 571);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(210, 30);
-            this.btnPay.TabIndex = 14;
-            this.btnPay.Text = "Pay";
-            this.btnPay.UseVisualStyleBackColor = true;
-            // 
-            // btnCreateBill
-            // 
-            this.btnCreateBill.Location = new System.Drawing.Point(508, 571);
-            this.btnCreateBill.Name = "btnCreateBill";
-            this.btnCreateBill.Size = new System.Drawing.Size(209, 30);
-            this.btnCreateBill.TabIndex = 15;
-            this.btnCreateBill.Text = "Create Bill";
-            this.btnCreateBill.UseVisualStyleBackColor = true;
-            // 
-            // txtSerchIDRental
-            // 
-            this.txtSerchIDRental.Location = new System.Drawing.Point(212, 15);
-            this.txtSerchIDRental.Name = "txtSerchIDRental";
-            this.txtSerchIDRental.Size = new System.Drawing.Size(170, 22);
-            this.txtSerchIDRental.TabIndex = 17;
+            this.SearchNameCustomer.Location = new System.Drawing.Point(623, 15);
+            this.SearchNameCustomer.Name = "SearchNameCustomer";
+            this.SearchNameCustomer.Size = new System.Drawing.Size(170, 22);
+            this.SearchNameCustomer.TabIndex = 19;
             // 
             // SearchIdentityCard
             // 
@@ -269,12 +228,53 @@
             this.SearchIdentityCard.Size = new System.Drawing.Size(170, 22);
             this.SearchIdentityCard.TabIndex = 18;
             // 
-            // SearchNameCustomer
+            // txtSerchIDRental
             // 
-            this.SearchNameCustomer.Location = new System.Drawing.Point(623, 15);
-            this.SearchNameCustomer.Name = "SearchNameCustomer";
-            this.SearchNameCustomer.Size = new System.Drawing.Size(170, 22);
-            this.SearchNameCustomer.TabIndex = 19;
+            this.txtSerchIDRental.Location = new System.Drawing.Point(212, 15);
+            this.txtSerchIDRental.Name = "txtSerchIDRental";
+            this.txtSerchIDRental.Size = new System.Drawing.Size(170, 22);
+            this.txtSerchIDRental.TabIndex = 17;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(113, 58);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 18);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Identity Card";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(493, 18);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(118, 18);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Name Customer";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(113, 18);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(68, 18);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "ID Rental";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 138);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1312, 241);
+            this.dataGridView1.TabIndex = 13;
             // 
             // txtIDRental
             // 
@@ -302,7 +302,7 @@
             // 
             // txtIdentityCard
             // 
-            this.txtIdentityCard.Location = new System.Drawing.Point(400, 404);
+            this.txtIdentityCard.Location = new System.Drawing.Point(103, 556);
             this.txtIdentityCard.Name = "txtIdentityCard";
             this.txtIdentityCard.ReadOnly = true;
             this.txtIdentityCard.Size = new System.Drawing.Size(147, 22);
@@ -310,7 +310,7 @@
             // 
             // txtNameApartment
             // 
-            this.txtNameApartment.Location = new System.Drawing.Point(400, 454);
+            this.txtNameApartment.Location = new System.Drawing.Point(400, 412);
             this.txtNameApartment.Name = "txtNameApartment";
             this.txtNameApartment.ReadOnly = true;
             this.txtNameApartment.Size = new System.Drawing.Size(147, 22);
@@ -318,23 +318,23 @@
             // 
             // txtType
             // 
-            this.txtType.Location = new System.Drawing.Point(400, 502);
+            this.txtType.Location = new System.Drawing.Point(400, 456);
             this.txtType.Name = "txtType";
             this.txtType.ReadOnly = true;
             this.txtType.Size = new System.Drawing.Size(147, 22);
             this.txtType.TabIndex = 22;
             // 
-            // txtPrice
+            // txtUnitPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(678, 502);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(147, 22);
-            this.txtPrice.TabIndex = 25;
+            this.txtUnitPrice.Location = new System.Drawing.Point(672, 412);
+            this.txtUnitPrice.Name = "txtUnitPrice";
+            this.txtUnitPrice.ReadOnly = true;
+            this.txtUnitPrice.Size = new System.Drawing.Size(147, 22);
+            this.txtUnitPrice.TabIndex = 25;
             // 
             // txtToTal
             // 
-            this.txtToTal.Location = new System.Drawing.Point(894, 451);
+            this.txtToTal.Location = new System.Drawing.Point(635, 597);
             this.txtToTal.Name = "txtToTal";
             this.txtToTal.ReadOnly = true;
             this.txtToTal.Size = new System.Drawing.Size(147, 22);
@@ -342,16 +342,16 @@
             // 
             // txtNumberDay
             // 
-            this.txtNumberDay.Location = new System.Drawing.Point(991, 407);
+            this.txtNumberDay.Location = new System.Drawing.Point(672, 456);
             this.txtNumberDay.Name = "txtNumberDay";
             this.txtNumberDay.ReadOnly = true;
-            this.txtNumberDay.Size = new System.Drawing.Size(133, 22);
+            this.txtNumberDay.Size = new System.Drawing.Size(147, 22);
             this.txtNumberDay.TabIndex = 27;
             // 
             // dtpDayOfHire
             // 
             this.dtpDayOfHire.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDayOfHire.Location = new System.Drawing.Point(678, 402);
+            this.dtpDayOfHire.Location = new System.Drawing.Point(400, 500);
             this.dtpDayOfHire.Name = "dtpDayOfHire";
             this.dtpDayOfHire.Size = new System.Drawing.Size(147, 22);
             this.dtpDayOfHire.TabIndex = 28;
@@ -359,29 +359,120 @@
             // dtbPaymentDay
             // 
             this.dtbPaymentDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtbPaymentDay.Location = new System.Drawing.Point(681, 449);
+            this.dtbPaymentDay.Location = new System.Drawing.Point(400, 551);
             this.dtbPaymentDay.Name = "dtbPaymentDay";
             this.dtbPaymentDay.Size = new System.Drawing.Size(147, 22);
             this.dtbPaymentDay.TabIndex = 29;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(891, 427);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(433, 246);
+            this.dataGridView2.TabIndex = 30;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(900, 398);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(136, 17);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "Information Services";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(571, 556);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(83, 17);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "Service Fee";
+            // 
+            // txtServiceFee
+            // 
+            this.txtServiceFee.Location = new System.Drawing.Point(670, 551);
+            this.txtServiceFee.Name = "txtServiceFee";
+            this.txtServiceFee.ReadOnly = true;
+            this.txtServiceFee.Size = new System.Drawing.Size(147, 22);
+            this.txtServiceFee.TabIndex = 33;
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPay.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.Image = ((System.Drawing.Image)(resources.GetObject("btnPay.Image")));
+            this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPay.Location = new System.Drawing.Point(103, 627);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(111, 46);
+            this.btnPay.TabIndex = 133;
+            this.btnPay.Text = "PAY";
+            this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPay.UseVisualStyleBackColor = false;
+            // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExport.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.Location = new System.Drawing.Point(323, 627);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(126, 46);
+            this.btnExport.TabIndex = 134;
+            this.btnExport.Text = "Export Bill";
+            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExport.UseVisualStyleBackColor = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(571, 507);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(119, 17);
+            this.label19.TabIndex = 136;
+            this.label19.Text = "Apartment Money";
+            // 
+            // txtApartmentMoney
+            // 
+            this.txtApartmentMoney.Location = new System.Drawing.Point(696, 499);
+            this.txtApartmentMoney.Name = "txtApartmentMoney";
+            this.txtApartmentMoney.ReadOnly = true;
+            this.txtApartmentMoney.Size = new System.Drawing.Size(147, 22);
+            this.txtApartmentMoney.TabIndex = 137;
             // 
             // PayApartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 613);
+            this.ClientSize = new System.Drawing.Size(1336, 710);
+            this.Controls.Add(this.txtApartmentMoney);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.btnPay);
+            this.Controls.Add(this.txtServiceFee);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dtbPaymentDay);
             this.Controls.Add(this.dtpDayOfHire);
             this.Controls.Add(this.txtNumberDay);
             this.Controls.Add(this.txtToTal);
-            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtUnitPrice);
             this.Controls.Add(this.txtType);
             this.Controls.Add(this.txtNameApartment);
             this.Controls.Add(this.txtIdentityCard);
             this.Controls.Add(this.txtNameCustomer);
             this.Controls.Add(this.txtIDCustomer);
             this.Controls.Add(this.txtIDRental);
-            this.Controls.Add(this.btnCreateBill);
-            this.Controls.Add(this.btnPay);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label12);
@@ -401,6 +492,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,10 +516,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btnPay;
-        private System.Windows.Forms.Button btnCreateBill;
         private System.Windows.Forms.TextBox SearchNameCustomer;
         private System.Windows.Forms.TextBox SearchIdentityCard;
         private System.Windows.Forms.TextBox txtSerchIDRental;
@@ -437,10 +526,20 @@
         private System.Windows.Forms.TextBox txtIdentityCard;
         private System.Windows.Forms.TextBox txtNameApartment;
         private System.Windows.Forms.TextBox txtType;
-        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtUnitPrice;
         private System.Windows.Forms.TextBox txtToTal;
         private System.Windows.Forms.TextBox txtNumberDay;
         private System.Windows.Forms.DateTimePicker dtpDayOfHire;
         private System.Windows.Forms.DateTimePicker dtbPaymentDay;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtServiceFee;
+        private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Button btnSearch;
+       
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtApartmentMoney;
     }
 }

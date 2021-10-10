@@ -13,3 +13,8 @@ C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManag
 C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.RentApartment.resources
 C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.PayApartment.resources
 C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.BillManagement.resources
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.Employee_manager.resources
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.Home_screen.resources
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.Form1.resources
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.Service.resources
+C:\Users\ASUS\Desktop\TourismManagement\TourismManagement\obj\Debug\TourismManagement.SignUp.resources

@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillManagement));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtServiceFee = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtRentalDays = new System.Windows.Forms.TextBox();
             this.dtpPaymentDay = new System.Windows.Forms.DateTimePicker();
@@ -49,19 +52,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnPay = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.txtNameApartmentSearch = new System.Windows.Forms.TextBox();
             this.txtNameCustomerSearch = new System.Windows.Forms.TextBox();
             this.txtIDBillSearch = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.dgvListOfCustomer = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtServiceFee = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtApartmentMoney = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListOfCustomer)).BeginInit();
@@ -70,6 +72,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtApartmentMoney);
+            this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.txtServiceFee);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.txtTotal);
@@ -92,16 +96,34 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(544, 310);
+            this.groupBox1.Size = new System.Drawing.Size(544, 388);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
             // 
+            // txtServiceFee
+            // 
+            this.txtServiceFee.AcceptsReturn = true;
+            this.txtServiceFee.Location = new System.Drawing.Point(32, 283);
+            this.txtServiceFee.Name = "txtServiceFee";
+            this.txtServiceFee.Size = new System.Drawing.Size(139, 22);
+            this.txtServiceFee.TabIndex = 20;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(29, 262);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(86, 18);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Service Fee";
+            // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(281, 271);
+            this.txtTotal.Location = new System.Drawing.Point(202, 342);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(170, 22);
+            this.txtTotal.Size = new System.Drawing.Size(249, 22);
             this.txtTotal.TabIndex = 18;
             // 
             // txtRentalDays
@@ -165,7 +187,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(278, 250);
+            this.label10.Location = new System.Drawing.Point(106, 342);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 18);
             this.label10.TabIndex = 9;
@@ -263,30 +285,51 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnPay);
+            this.groupBox2.Controls.Add(this.btnPrint);
+            this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.txtNameApartmentSearch);
             this.groupBox2.Controls.Add(this.txtNameCustomerSearch);
             this.groupBox2.Controls.Add(this.txtIDBillSearch);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.btnPrint);
-            this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Location = new System.Drawing.Point(577, 37);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(454, 310);
+            this.groupBox2.Size = new System.Drawing.Size(454, 388);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Function";
             // 
-            // btnPay
+            // btnPrint
             // 
-            this.btnPay.Location = new System.Drawing.Point(149, 235);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(137, 33);
-            this.btnPay.TabIndex = 14;
-            this.btnPay.Text = "Pay";
-            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPrint.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(249, 222);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(112, 46);
+            this.btnPrint.TabIndex = 133;
+            this.btnPrint.Text = "Print Bill";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(79, 222);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(93, 46);
+            this.btnSearch.TabIndex = 132;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // txtNameApartmentSearch
             // 
@@ -312,91 +355,76 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(34, 153);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(114, 17);
+            this.label13.Size = new System.Drawing.Size(119, 18);
             this.label13.TabIndex = 4;
             this.label13.Text = "Name Apartment";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(34, 103);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 17);
+            this.label12.Size = new System.Drawing.Size(118, 18);
             this.label12.TabIndex = 3;
             this.label12.Text = "Name Customer";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(34, 55);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 17);
+            this.label11.Size = new System.Drawing.Size(45, 18);
             this.label11.TabIndex = 2;
             this.label11.Text = "ID Bill";
             // 
-            // btnPrint
-            // 
-            this.btnPrint.Location = new System.Drawing.Point(292, 235);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(137, 33);
-            this.btnPrint.TabIndex = 1;
-            this.btnPrint.Text = "Print Bill";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(6, 236);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(137, 33);
-            this.btnSearch.TabIndex = 0;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
             // dgvListOfCustomer
             // 
+            this.dgvListOfCustomer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvListOfCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListOfCustomer.Location = new System.Drawing.Point(12, 16);
+            this.dgvListOfCustomer.Location = new System.Drawing.Point(0, 21);
             this.dgvListOfCustomer.Name = "dgvListOfCustomer";
             this.dgvListOfCustomer.RowHeadersWidth = 51;
             this.dgvListOfCustomer.RowTemplate.Height = 24;
-            this.dgvListOfCustomer.Size = new System.Drawing.Size(1013, 258);
+            this.dgvListOfCustomer.Size = new System.Drawing.Size(1013, 262);
             this.dgvListOfCustomer.TabIndex = 3;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvListOfCustomer);
-            this.groupBox3.Location = new System.Drawing.Point(12, 353);
+            this.groupBox3.Location = new System.Drawing.Point(12, 431);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1025, 280);
+            this.groupBox3.Size = new System.Drawing.Size(1025, 289);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List Of Bill";
             // 
-            // label14
+            // label15
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(29, 250);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(86, 18);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "Service Fee";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(278, 262);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(124, 18);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "Apartment Money";
             // 
-            // txtServiceFee
+            // txtApartmentMoney
             // 
-            this.txtServiceFee.AcceptsReturn = true;
-            this.txtServiceFee.Location = new System.Drawing.Point(32, 273);
-            this.txtServiceFee.Name = "txtServiceFee";
-            this.txtServiceFee.Size = new System.Drawing.Size(139, 22);
-            this.txtServiceFee.TabIndex = 20;
+            this.txtApartmentMoney.Location = new System.Drawing.Point(281, 283);
+            this.txtApartmentMoney.Name = "txtApartmentMoney";
+            this.txtApartmentMoney.Size = new System.Drawing.Size(170, 22);
+            this.txtApartmentMoney.TabIndex = 22;
             // 
             // BillManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 645);
+            this.ClientSize = new System.Drawing.Size(1049, 732);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
@@ -430,8 +458,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvListOfCustomer;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
@@ -447,8 +473,11 @@
         private System.Windows.Forms.TextBox txtNameApartmentSearch;
         private System.Windows.Forms.TextBox txtNameCustomerSearch;
         private System.Windows.Forms.TextBox txtIDBillSearch;
-        private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.TextBox txtServiceFee;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.TextBox txtApartmentMoney;
+        private System.Windows.Forms.Label label15;
     }
 }
