@@ -7,14 +7,81 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace TourismManagement
 {
     public partial class SinIn : Form
     {
+        UserBUS userBUS = new UserBUS();
         public SinIn()
         {
             InitializeComponent();
         }
+        public bool CheckEmpty()
+        {
+            if (txtUsername.Text.Length == 0 && txtPassword.Text.Length == 0)
+            {
+                MessageBox.Show("Please enter in your full username and password!", "Notification",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return true;
+            }
+            else
+                if (txtPassword.Text.Length == 0)
+            {
+                MessageBox.Show("Please enter password!", "Notification",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return true;
+            }
+            else
+                if (txtUsername.Text.Length == 0)
+            {
+                MessageBox.Show("Please enter username!", "Notification",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return true;
+            }
+
+            return false;
+        }
+ 
+        private void ckbShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbShow.Checked == false)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+            else
+                txtPassword.UseSystemPasswordChar = false;
+        }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            if (CheckEmpty() == false)
+            {
+                int ID = userBUS.Login(txtUsername.Text, txtPassword.Text);
+                if (ID != -1)
+                {
+
+                    MessageBox.Show("Logged in succesfully", "Notification", MessageBoxButtons.OK,
+                       MessageBoxIcon.Information);
+                    txtPassword.Text = "";
+                    Home_screen menu = new Home_screen();
+
+                    menu.ShowDialog();
+                }
+
+                else
+                    MessageBox.Show("Login failed. Please try again!", "Notification",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            SignUp signUp = new SignUp();
+            signUp.ShowDialog();
+        }
+
+      
     }
 }

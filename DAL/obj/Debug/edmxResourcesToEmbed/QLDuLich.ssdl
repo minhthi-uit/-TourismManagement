@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLDuLichModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACCOUNT">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="display_name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="pass" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="permission" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'QLDuLich.dbo.AMOUNT' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="AMOUNT">
+          <Property Name="customer_ratio" Type="float" />
+          <Property Name="max_customer" Type="int" />
+          <Property Name="amount_surchage" Type="int" />
+        </EntityType>-->
+  <EntityType Name="BILL">
+    <Key>
+      <PropertyRef Name="id_bill" />
+    </Key>
+    <Property Name="id_bill" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bill_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="bill_address" Type="nvarchar" MaxLength="100" />
+    <Property Name="total_money" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="BILL_DETAILS">
+    <Key>
+      <PropertyRef Name="id_bill" />
+      <PropertyRef Name="id_checkin" />
+    </Key>
+    <Property Name="id_bill" Type="int" Nullable="false" />
+    <Property Name="id_checkin" Type="int" Nullable="false" />
+    <Property Name="date_number" Type="int" />
+    <Property Name="surchage_ratio" Type="float" />
+  </EntityType>
+  <EntityType Name="CHECKIN">
+    <Key>
+      <PropertyRef Name="id_checkin" />
+    </Key>
+    <Property Name="id_checkin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_start" Type="date" Nullable="false" />
+    <Property Name="id_room" Type="nvarchar" MaxLength="100" />
+    <Property Name="money_checkin" Type="money" />
+    <Property Name="type_ratioMAX" Type="float" />
+    <Property Name="number_customer" Type="int" />
+    <Property Name="status_checkin" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CHECKIN_DETAILS">
+    <Key>
+      <PropertyRef Name="id_checkin_details" />
+    </Key>
+    <Property Name="id_checkin_details" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="customer_type" Type="nvarchar" MaxLength="100" />
+    <Property Name="customer_cmnd" Type="nvarchar" MaxLength="100" />
+    <Property Name="customer_address" Type="nvarchar" MaxLength="100" />
+    <Property Name="id_checkin" Type="int" />
+  </EntityType>
+  <EntityType Name="CUSTOMER_TYPE">
+    <Key>
+      <PropertyRef Name="customer_type" />
+    </Key>
+    <Property Name="customer_type" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ratio" Type="float" />
+  </EntityType>
+  <EntityType Name="ROOM">
+    <Key>
+      <PropertyRef Name="id_room" />
+    </Key>
+    <Property Name="id_room" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="room_type" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="notes" Type="nvarchar" MaxLength="100" />
+    <Property Name="statuss" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ROOMTYPE">
+    <Key>
+      <PropertyRef Name="room_type" />
+    </Key>
+    <Property Name="room_type" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="price" Type="money" />
+  </EntityType>
+  <Association Name="FK__BILL_DETA__id_bi__48CFD27E">
+    <End Role="BILL" Type="Self.BILL" Multiplicity="1" />
+    <End Role="BILL_DETAILS" Type="Self.BILL_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BILL">
+        <PropertyRef Name="id_bill" />
+      </Principal>
+      <Dependent Role="BILL_DETAILS">
+        <PropertyRef Name="id_bill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BILL_DETA__id_ch__49C3F6B7">
+    <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="1" />
+    <End Role="BILL_DETAILS" Type="Self.BILL_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHECKIN">
+        <PropertyRef Name="id_checkin" />
+      </Principal>
+      <Dependent Role="BILL_DETAILS">
+        <PropertyRef Name="id_checkin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHECKIN__id_room__403A8C7D">
+    <End Role="ROOM" Type="Self.ROOM" Multiplicity="0..1" />
+    <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROOM">
+        <PropertyRef Name="id_room" />
+      </Principal>
+      <Dependent Role="CHECKIN">
+        <PropertyRef Name="id_room" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHECKIN_D__custo__4316F928">
+    <End Role="CUSTOMER_TYPE" Type="Self.CUSTOMER_TYPE" Multiplicity="0..1" />
+    <End Role="CHECKIN_DETAILS" Type="Self.CHECKIN_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER_TYPE">
+        <PropertyRef Name="customer_type" />
+      </Principal>
+      <Dependent Role="CHECKIN_DETAILS">
+        <PropertyRef Name="customer_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHECKIN_D__id_ch__440B1D61">
+    <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="0..1" />
+    <End Role="CHECKIN_DETAILS" Type="Self.CHECKIN_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHECKIN">
+        <PropertyRef Name="id_checkin" />
+      </Principal>
+      <Dependent Role="CHECKIN_DETAILS">
+        <PropertyRef Name="id_checkin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ROOM__room_type__3B75D760">
+    <End Role="ROOMTYPE" Type="Self.ROOMTYPE" Multiplicity="1" />
+    <End Role="ROOM" Type="Self.ROOM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROOMTYPE">
+        <PropertyRef Name="room_type" />
+      </Principal>
+      <Dependent Role="ROOM">
+        <PropertyRef Name="room_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLDuLichModelStoreContainer">
+    <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BILL" EntityType="Self.BILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BILL_DETAILS" EntityType="Self.BILL_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHECKIN" EntityType="Self.CHECKIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHECKIN_DETAILS" EntityType="Self.CHECKIN_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUSTOMER_TYPE" EntityType="Self.CUSTOMER_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROOM" EntityType="Self.ROOM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROOMTYPE" EntityType="Self.ROOMTYPE" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__BILL_DETA__id_bi__48CFD27E" Association="Self.FK__BILL_DETA__id_bi__48CFD27E">
+      <End Role="BILL" EntitySet="BILL" />
+      <End Role="BILL_DETAILS" EntitySet="BILL_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BILL_DETA__id_ch__49C3F6B7" Association="Self.FK__BILL_DETA__id_ch__49C3F6B7">
+      <End Role="CHECKIN" EntitySet="CHECKIN" />
+      <End Role="BILL_DETAILS" EntitySet="BILL_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHECKIN__id_room__403A8C7D" Association="Self.FK__CHECKIN__id_room__403A8C7D">
+      <End Role="ROOM" EntitySet="ROOM" />
+      <End Role="CHECKIN" EntitySet="CHECKIN" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHECKIN_D__custo__4316F928" Association="Self.FK__CHECKIN_D__custo__4316F928">
+      <End Role="CUSTOMER_TYPE" EntitySet="CUSTOMER_TYPE" />
+      <End Role="CHECKIN_DETAILS" EntitySet="CHECKIN_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHECKIN_D__id_ch__440B1D61" Association="Self.FK__CHECKIN_D__id_ch__440B1D61">
+      <End Role="CHECKIN" EntitySet="CHECKIN" />
+      <End Role="CHECKIN_DETAILS" EntitySet="CHECKIN_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ROOM__room_type__3B75D760" Association="Self.FK__ROOM__room_type__3B75D760">
+      <End Role="ROOMTYPE" EntitySet="ROOMTYPE" />
+      <End Role="ROOM" EntitySet="ROOM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

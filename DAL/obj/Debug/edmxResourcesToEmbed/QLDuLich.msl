@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLDuLichModelStoreContainer" CdmEntityContainer="QLDuLichEntities">
+    <EntitySetMapping Name="ACCOUNTs">
+      <EntityTypeMapping TypeName="QLDuLichModel.ACCOUNT">
+        <MappingFragment StoreEntitySet="ACCOUNT">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="display_name" ColumnName="display_name" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="permission" ColumnName="permission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BILLs">
+      <EntityTypeMapping TypeName="QLDuLichModel.BILL">
+        <MappingFragment StoreEntitySet="BILL">
+          <ScalarProperty Name="id_bill" ColumnName="id_bill" />
+          <ScalarProperty Name="bill_name" ColumnName="bill_name" />
+          <ScalarProperty Name="bill_address" ColumnName="bill_address" />
+          <ScalarProperty Name="total_money" ColumnName="total_money" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BILL_DETAILS">
+      <EntityTypeMapping TypeName="QLDuLichModel.BILL_DETAILS">
+        <MappingFragment StoreEntitySet="BILL_DETAILS">
+          <ScalarProperty Name="id_bill" ColumnName="id_bill" />
+          <ScalarProperty Name="id_checkin" ColumnName="id_checkin" />
+          <ScalarProperty Name="date_number" ColumnName="date_number" />
+          <ScalarProperty Name="surchage_ratio" ColumnName="surchage_ratio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHECKINs">
+      <EntityTypeMapping TypeName="QLDuLichModel.CHECKIN">
+        <MappingFragment StoreEntitySet="CHECKIN">
+          <ScalarProperty Name="id_checkin" ColumnName="id_checkin" />
+          <ScalarProperty Name="date_start" ColumnName="date_start" />
+          <ScalarProperty Name="id_room" ColumnName="id_room" />
+          <ScalarProperty Name="money_checkin" ColumnName="money_checkin" />
+          <ScalarProperty Name="type_ratioMAX" ColumnName="type_ratioMAX" />
+          <ScalarProperty Name="number_customer" ColumnName="number_customer" />
+          <ScalarProperty Name="status_checkin" ColumnName="status_checkin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHECKIN_DETAILS">
+      <EntityTypeMapping TypeName="QLDuLichModel.CHECKIN_DETAILS">
+        <MappingFragment StoreEntitySet="CHECKIN_DETAILS">
+          <ScalarProperty Name="id_checkin_details" ColumnName="id_checkin_details" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="customer_type" ColumnName="customer_type" />
+          <ScalarProperty Name="customer_cmnd" ColumnName="customer_cmnd" />
+          <ScalarProperty Name="customer_address" ColumnName="customer_address" />
+          <ScalarProperty Name="id_checkin" ColumnName="id_checkin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMER_TYPE">
+      <EntityTypeMapping TypeName="QLDuLichModel.CUSTOMER_TYPE">
+        <MappingFragment StoreEntitySet="CUSTOMER_TYPE">
+          <ScalarProperty Name="customer_type1" ColumnName="customer_type" />
+          <ScalarProperty Name="ratio" ColumnName="ratio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROOMs">
+      <EntityTypeMapping TypeName="QLDuLichModel.ROOM">
+        <MappingFragment StoreEntitySet="ROOM">
+          <ScalarProperty Name="id_room" ColumnName="id_room" />
+          <ScalarProperty Name="room_type" ColumnName="room_type" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="statuss" ColumnName="statuss" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROOMTYPEs">
+      <EntityTypeMapping TypeName="QLDuLichModel.ROOMTYPE">
+        <MappingFragment StoreEntitySet="ROOMTYPE">
+          <ScalarProperty Name="room_type" ColumnName="room_type" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

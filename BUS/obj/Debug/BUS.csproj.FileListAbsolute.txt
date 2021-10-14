@@ -1,0 +1,13 @@
+C:\Users\ASUS\Desktop\TourismManagement\BUS\bin\Debug\BUS.dll.config
+C:\Users\ASUS\Desktop\TourismManagement\BUS\bin\Debug\BUS.dll
+C:\Users\ASUS\Desktop\TourismManagement\BUS\bin\Debug\BUS.pdb
+C:\Users\ASUS\Desktop\TourismManagement\BUS\bin\Debug\DAL.dll
+C:\Users\ASUS\Desktop\TourismManagement\BUS\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\TourismManagement\BUS\bin\Debug\DAL.pdb
+C:\Users\ASUS\Desktop\TourismManagement\BUS\bin\Debug\DAL.dll.config
+C:\Users\ASUS\Desktop\TourismManagement\BUS\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\TourismManagement\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\TourismManagement\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\TourismManagement\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\ASUS\Desktop\TourismManagement\BUS\obj\Debug\BUS.dll
+C:\Users\ASUS\Desktop\TourismManagement\BUS\obj\Debug\BUS.pdb
