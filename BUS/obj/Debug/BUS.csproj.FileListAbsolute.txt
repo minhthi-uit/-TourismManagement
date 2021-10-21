@@ -11,3 +11,16 @@ C:\Users\ASUS\Desktop\TourismManagement\BUS\obj\Debug\BUS.csproj.CoreCompileInpu
 C:\Users\ASUS\Desktop\TourismManagement\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\ASUS\Desktop\TourismManagement\BUS\obj\Debug\BUS.dll
 C:\Users\ASUS\Desktop\TourismManagement\BUS\obj\Debug\BUS.pdb
+C:\Users\Admin\Documents\CODE\Tourism\BUS\bin\Debug\BUS.dll.config
+C:\Users\Admin\Documents\CODE\Tourism\BUS\bin\Debug\BUS.dll
+C:\Users\Admin\Documents\CODE\Tourism\BUS\bin\Debug\BUS.pdb
+C:\Users\Admin\Documents\CODE\Tourism\BUS\bin\Debug\DAL.dll
+C:\Users\Admin\Documents\CODE\Tourism\BUS\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\CODE\Tourism\BUS\bin\Debug\DAL.pdb
+C:\Users\Admin\Documents\CODE\Tourism\BUS\bin\Debug\DAL.dll.config
+C:\Users\Admin\Documents\CODE\Tourism\BUS\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\CODE\Tourism\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\CODE\Tourism\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\CODE\Tourism\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\Admin\Documents\CODE\Tourism\BUS\obj\Debug\BUS.dll
+C:\Users\Admin\Documents\CODE\Tourism\BUS\obj\Debug\BUS.pdb

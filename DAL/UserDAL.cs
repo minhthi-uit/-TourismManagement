@@ -21,6 +21,10 @@ namespace DAL
             }
             return -1;
         }
-
+        public void Addaccount(ACCOUNT ac)
+        {
+            entities.ACCOUNTs.Add(ac);
+            entities.SaveChanges();
+        }
     }
 }

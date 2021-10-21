@@ -78,7 +78,7 @@ namespace TourismManagement
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            SignUp signUp = new SignUp();
+            SIGNUP signUp = new SIGNUP();
             signUp.ShowDialog();
         }
 

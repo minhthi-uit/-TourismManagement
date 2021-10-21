@@ -14,5 +14,9 @@ namespace BUS
         {
             return userDAL.Login(username, password);
         }
+        public void Addaccount(ACCOUNT ac)
+        {
+             userDAL.Addaccount(ac);
+        }
     }
 }
