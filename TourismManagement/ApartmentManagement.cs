@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TourismManagement
 {
-    public partial class ApartmentManagement : Form
+    public partial class ApartmentManagement : UserControl
     {
         public ApartmentManagement()
         {

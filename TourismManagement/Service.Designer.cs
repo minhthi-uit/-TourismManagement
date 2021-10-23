@@ -30,11 +30,7 @@ namespace TourismManagement
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Service));
-           
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.dgvListOfServices = new System.Windows.Forms.DataGridView();
-            this.btnBack = new System.Windows.Forms.Button();
             this.dgvRegisterService = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,49 +38,18 @@ namespace TourismManagement
             this.txtServiceName = new System.Windows.Forms.TextBox();
             this.txtQuanity = new System.Windows.Forms.TextBox();
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtIntoMoney = new System.Windows.Forms.TextBox();
-            this.btnIntoMoney = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotalMoney = new System.Windows.Forms.TextBox();
+            this.btnIntoMoney = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListOfServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegisterService)).BeginInit();
             this.SuspendLayout();
-            
-           
-          
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPrint.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(954, 236);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(112, 35);
-            this.btnPrint.TabIndex = 131;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrint.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnDelete.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(955, 126);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(112, 44);
-            this.btnDelete.TabIndex = 128;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // dgvListOfServices
             // 
@@ -100,22 +65,6 @@ namespace TourismManagement
             this.dgvListOfServices.RowTemplate.Height = 24;
             this.dgvListOfServices.Size = new System.Drawing.Size(615, 247);
             this.dgvListOfServices.TabIndex = 125;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnBack.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(83, 6);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(128, 44);
-            this.btnBack.TabIndex = 103;
-            this.btnBack.Text = "Back";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBack.UseVisualStyleBackColor = false;
-           
             // 
             // dgvRegisterService
             // 
@@ -181,23 +130,6 @@ namespace TourismManagement
             this.txtUnitPrice.Size = new System.Drawing.Size(126, 22);
             this.txtUnitPrice.TabIndex = 149;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(955, 87);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(111, 30);
-            this.btnAdd.TabIndex = 150;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -215,23 +147,6 @@ namespace TourismManagement
             this.txtIntoMoney.ReadOnly = true;
             this.txtIntoMoney.Size = new System.Drawing.Size(126, 22);
             this.txtIntoMoney.TabIndex = 152;
-            // 
-            // btnIntoMoney
-            // 
-            this.btnIntoMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnIntoMoney.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnIntoMoney.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIntoMoney.Image = ((System.Drawing.Image)(resources.GetObject("btnIntoMoney.Image")));
-            this.btnIntoMoney.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIntoMoney.Location = new System.Drawing.Point(955, 178);
-            this.btnIntoMoney.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIntoMoney.Name = "btnIntoMoney";
-            this.btnIntoMoney.Size = new System.Drawing.Size(142, 35);
-            this.btnIntoMoney.TabIndex = 153;
-            this.btnIntoMoney.Text = "Into Money";
-            this.btnIntoMoney.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIntoMoney.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnIntoMoney.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -252,11 +167,86 @@ namespace TourismManagement
             this.txtTotalMoney.Size = new System.Drawing.Size(172, 36);
             this.txtTotalMoney.TabIndex = 155;
             // 
+            // btnIntoMoney
+            // 
+            this.btnIntoMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnIntoMoney.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnIntoMoney.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIntoMoney.Image = ((System.Drawing.Image)(resources.GetObject("btnIntoMoney.Image")));
+            this.btnIntoMoney.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIntoMoney.Location = new System.Drawing.Point(955, 178);
+            this.btnIntoMoney.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIntoMoney.Name = "btnIntoMoney";
+            this.btnIntoMoney.Size = new System.Drawing.Size(123, 44);
+            this.btnIntoMoney.TabIndex = 153;
+            this.btnIntoMoney.Text = "Into Money";
+            this.btnIntoMoney.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIntoMoney.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(955, 71);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(123, 44);
+            this.btnAdd.TabIndex = 150;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPrint.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(955, 230);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(123, 44);
+            this.btnPrint.TabIndex = 131;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDelete.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(955, 126);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(123, 44);
+            this.btnDelete.TabIndex = 128;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnBack.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBack.Location = new System.Drawing.Point(13, 19);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(128, 44);
+            this.btnBack.TabIndex = 103;
+            this.btnBack.Text = "Back";
+            this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBack.UseVisualStyleBackColor = false;
+            // 
             // Service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 638);
             this.Controls.Add(this.txtTotalMoney);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnIntoMoney);
@@ -276,7 +266,7 @@ namespace TourismManagement
             this.Controls.Add(this.btnBack);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Service";
-            this.Text = "Service";
+            this.Size = new System.Drawing.Size(1106, 638);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListOfServices)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegisterService)).EndInit();
             this.ResumeLayout(false);

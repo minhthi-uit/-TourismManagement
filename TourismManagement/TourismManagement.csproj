@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApartmentManagement.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ApartmentManagement.Designer.cs">
       <DependentUpon>ApartmentManagement.cs</DependentUpon>
@@ -80,11 +80,23 @@
     <Compile Include="Employee manager.Designer.cs">
       <DependentUpon>Employee manager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home screen.cs">
+    <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home screen.Designer.cs">
-      <DependentUpon>Home screen.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RoomManagement.Designer.cs">
+      <DependentUpon>RoomManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales report.cs">
       <SubType>Form</SubType>
@@ -99,13 +111,13 @@
       <DependentUpon>PayApartment.cs</DependentUpon>
     </Compile>
     <Compile Include="RentApartment.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="RentApartment.Designer.cs">
       <DependentUpon>RentApartment.cs</DependentUpon>
     </Compile>
     <Compile Include="Service.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Service.Designer.cs">
       <DependentUpon>Service.cs</DependentUpon>
@@ -136,8 +148,14 @@
     <EmbeddedResource Include="Employee manager.resx">
       <DependentUpon>Employee manager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home screen.resx">
-      <DependentUpon>Home screen.cs</DependentUpon>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomManagement.resx">
+      <DependentUpon>RoomManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales report.resx">
       <DependentUpon>Sales report.cs</DependentUpon>

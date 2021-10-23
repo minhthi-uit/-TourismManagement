@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinIn));
             this.pnlMatKhau = new System.Windows.Forms.Panel();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.lblChuaCoTaiKhoan = new System.Windows.Forms.Label();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.picMatKhau = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -57,8 +56,8 @@
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.Gray;
-            this.btnRegister.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(133, 468);
+            this.btnRegister.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Location = new System.Drawing.Point(133, 382);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(221, 46);
@@ -67,26 +66,16 @@
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // lblChuaCoTaiKhoan
-            // 
-            this.lblChuaCoTaiKhoan.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChuaCoTaiKhoan.Location = new System.Drawing.Point(133, 416);
-            this.lblChuaCoTaiKhoan.Name = "lblChuaCoTaiKhoan";
-            this.lblChuaCoTaiKhoan.Size = new System.Drawing.Size(221, 33);
-            this.lblChuaCoTaiKhoan.TabIndex = 22;
-            this.lblChuaCoTaiKhoan.Text = "No account";
-            this.lblChuaCoTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnLogIn
             // 
             this.btnLogIn.BackColor = System.Drawing.Color.Gray;
-            this.btnLogIn.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogIn.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogIn.Location = new System.Drawing.Point(133, 304);
             this.btnLogIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(221, 46);
             this.btnLogIn.TabIndex = 20;
-            this.btnLogIn.Text = "Log in";
+            this.btnLogIn.Text = "LOGIN";
             this.btnLogIn.UseVisualStyleBackColor = false;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
@@ -103,21 +92,21 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPassword.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPassword.Location = new System.Drawing.Point(92, 202);
+            this.txtPassword.ForeColor = System.Drawing.Color.Wheat;
+            this.txtPassword.Location = new System.Drawing.Point(92, 207);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(335, 30);
+            this.txtPassword.Size = new System.Drawing.Size(375, 30);
             this.txtPassword.TabIndex = 17;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // picTenDangNhap
             // 
             this.picTenDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("picTenDangNhap.Image")));
-            this.picTenDangNhap.Location = new System.Drawing.Point(29, 134);
+            this.picTenDangNhap.Location = new System.Drawing.Point(29, 127);
             this.picTenDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picTenDangNhap.Name = "picTenDangNhap";
             this.picTenDangNhap.Size = new System.Drawing.Size(40, 38);
@@ -137,11 +126,11 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.BackColor = System.Drawing.SystemColors.Control;
+            this.txtUsername.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Palatino Linotype", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsername.Location = new System.Drawing.Point(92, 134);
+            this.txtUsername.Location = new System.Drawing.Point(92, 132);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(375, 30);
@@ -151,19 +140,19 @@
             // 
             this.lblDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.lblDangNhap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblDangNhap.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDangNhap.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDangNhap.ForeColor = System.Drawing.Color.Black;
             this.lblDangNhap.Location = new System.Drawing.Point(0, 0);
             this.lblDangNhap.Name = "lblDangNhap";
-            this.lblDangNhap.Size = new System.Drawing.Size(531, 71);
+            this.lblDangNhap.Size = new System.Drawing.Size(542, 71);
             this.lblDangNhap.TabIndex = 13;
-            this.lblDangNhap.Text = "LOG IN";
+            this.lblDangNhap.Text = "SIGN IN";
             this.lblDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ckbShow
             // 
             this.ckbShow.AutoSize = true;
-            this.ckbShow.Location = new System.Drawing.Point(433, 212);
+            this.ckbShow.Location = new System.Drawing.Point(473, 218);
             this.ckbShow.Name = "ckbShow";
             this.ckbShow.Size = new System.Drawing.Size(64, 21);
             this.ckbShow.TabIndex = 25;
@@ -176,13 +165,11 @@
             this.AcceptButton = this.btnLogIn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(531, 571);
+            this.ClientSize = new System.Drawing.Size(542, 517);
             this.Controls.Add(this.ckbShow);
             this.Controls.Add(this.pnlMatKhau);
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.lblChuaCoTaiKhoan);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.picMatKhau);
             this.Controls.Add(this.txtPassword);
@@ -205,7 +192,6 @@
 
         private System.Windows.Forms.Panel pnlMatKhau;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Label lblChuaCoTaiKhoan;
         private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.PictureBox picMatKhau;
         private System.Windows.Forms.TextBox txtPassword;

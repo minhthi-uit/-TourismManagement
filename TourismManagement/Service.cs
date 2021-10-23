@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TourismManagement
 {
-    public partial class Service : Form
+    public partial class Service : UserControl
     {
         public Service()
         {

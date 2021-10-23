@@ -326,7 +326,7 @@
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(672, 412);
+            this.txtUnitPrice.Location = new System.Drawing.Point(696, 412);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.ReadOnly = true;
             this.txtUnitPrice.Size = new System.Drawing.Size(147, 22);
@@ -334,7 +334,7 @@
             // 
             // txtToTal
             // 
-            this.txtToTal.Location = new System.Drawing.Point(635, 597);
+            this.txtToTal.Location = new System.Drawing.Point(696, 599);
             this.txtToTal.Name = "txtToTal";
             this.txtToTal.ReadOnly = true;
             this.txtToTal.Size = new System.Drawing.Size(147, 22);
@@ -342,7 +342,7 @@
             // 
             // txtNumberDay
             // 
-            this.txtNumberDay.Location = new System.Drawing.Point(672, 456);
+            this.txtNumberDay.Location = new System.Drawing.Point(696, 456);
             this.txtNumberDay.Name = "txtNumberDay";
             this.txtNumberDay.ReadOnly = true;
             this.txtNumberDay.Size = new System.Drawing.Size(147, 22);
@@ -395,7 +395,7 @@
             // 
             // txtServiceFee
             // 
-            this.txtServiceFee.Location = new System.Drawing.Point(670, 551);
+            this.txtServiceFee.Location = new System.Drawing.Point(696, 551);
             this.txtServiceFee.Name = "txtServiceFee";
             this.txtServiceFee.ReadOnly = true;
             this.txtServiceFee.Size = new System.Drawing.Size(147, 22);

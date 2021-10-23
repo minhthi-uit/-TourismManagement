@@ -65,9 +65,13 @@ namespace TourismManagement
                     MessageBox.Show("Logged in succesfully", "Notification", MessageBoxButtons.OK,
                        MessageBoxIcon.Information);
                     txtPassword.Text = "";
-                    Home_screen menu = new Home_screen();
+                    //Home_screen menu = new Home_screen();
+
+                    //menu.ShowDialog();
+                    HomePage menu = new HomePage();
 
                     menu.ShowDialog();
+
                 }
 
                 else
@@ -82,6 +86,9 @@ namespace TourismManagement
             signUp.ShowDialog();
         }
 
-      
+        private void lblChuaCoTaiKhoan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

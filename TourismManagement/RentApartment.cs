@@ -10,13 +10,26 @@ using System.Windows.Forms;
 
 namespace TourismManagement
 {
-    public partial class RentApartment : Form
+    public partial class RentApartment : UserControl
     {
         public RentApartment()
         {
             InitializeComponent();
         }
 
-        
+        private void dtpDateOfHire_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

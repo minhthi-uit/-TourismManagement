@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillManagement));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtApartmentMoney = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.txtServiceFee = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
@@ -62,8 +64,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dgvListOfCustomer = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtApartmentMoney = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListOfCustomer)).BeginInit();
@@ -101,6 +101,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
             // 
+            // txtApartmentMoney
+            // 
+            this.txtApartmentMoney.Location = new System.Drawing.Point(281, 283);
+            this.txtApartmentMoney.Name = "txtApartmentMoney";
+            this.txtApartmentMoney.Size = new System.Drawing.Size(170, 22);
+            this.txtApartmentMoney.TabIndex = 22;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(278, 262);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(124, 18);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "Apartment Money";
+            // 
             // txtServiceFee
             // 
             this.txtServiceFee.AcceptsReturn = true;
@@ -121,7 +138,7 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(202, 342);
+            this.txtTotal.Location = new System.Drawing.Point(153, 341);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(249, 22);
             this.txtTotal.TabIndex = 18;
@@ -187,7 +204,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(106, 342);
+            this.label10.Location = new System.Drawing.Point(31, 342);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 18);
             this.label10.TabIndex = 9;
@@ -402,23 +419,6 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List Of Bill";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(278, 262);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(124, 18);
-            this.label15.TabIndex = 21;
-            this.label15.Text = "Apartment Money";
-            // 
-            // txtApartmentMoney
-            // 
-            this.txtApartmentMoney.Location = new System.Drawing.Point(281, 283);
-            this.txtApartmentMoney.Name = "txtApartmentMoney";
-            this.txtApartmentMoney.Size = new System.Drawing.Size(170, 22);
-            this.txtApartmentMoney.TabIndex = 22;
             // 
             // BillManagement
             // 
