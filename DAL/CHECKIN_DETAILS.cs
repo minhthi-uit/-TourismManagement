@@ -20,8 +20,11 @@ namespace DAL
         public string customer_cmnd { get; set; }
         public string customer_address { get; set; }
         public Nullable<int> id_checkin { get; set; }
+        public string customer_phone { get; set; }
+        public Nullable<int> id_customer { get; set; }
     
         public virtual CHECKIN CHECKIN { get; set; }
         public virtual CUSTOMER_TYPE CUSTOMER_TYPE1 { get; set; }
+        public virtual CUSTOMER CUSTOMER { get; set; }
     }
 }

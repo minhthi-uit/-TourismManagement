@@ -36,6 +36,24 @@ warning 6013: The table/view 'QLDuLich.dbo.AMOUNT' does not have a primary key d
     <Property Name="date_number" Type="int" />
     <Property Name="surchage_ratio" Type="float" />
   </EntityType>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="id_customer" />
+    </Key>
+    <Property Name="id_customer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="customer_type" Type="nvarchar" MaxLength="100" />
+    <Property Name="customer_cmnd" Type="nvarchar" MaxLength="100" />
+    <Property Name="customer_address" Type="nvarchar" MaxLength="100" />
+    <Property Name="customer_phone" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CUSTOMER_TYPE">
+    <Key>
+      <PropertyRef Name="customer_type" />
+    </Key>
+    <Property Name="customer_type" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ratio" Type="float" />
+  </EntityType>
   <EntityType Name="CHECKIN">
     <Key>
       <PropertyRef Name="id_checkin" />
@@ -57,14 +75,9 @@ warning 6013: The table/view 'QLDuLich.dbo.AMOUNT' does not have a primary key d
     <Property Name="customer_type" Type="nvarchar" MaxLength="100" />
     <Property Name="customer_cmnd" Type="nvarchar" MaxLength="100" />
     <Property Name="customer_address" Type="nvarchar" MaxLength="100" />
+    <Property Name="customer_phone" Type="nvarchar" MaxLength="100" />
     <Property Name="id_checkin" Type="int" />
-  </EntityType>
-  <EntityType Name="CUSTOMER_TYPE">
-    <Key>
-      <PropertyRef Name="customer_type" />
-    </Key>
-    <Property Name="customer_type" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="ratio" Type="float" />
+    <Property Name="id_customer" Type="int" />
   </EntityType>
   <EntityType Name="ROOM">
     <Key>
@@ -74,6 +87,10 @@ warning 6013: The table/view 'QLDuLich.dbo.AMOUNT' does not have a primary key d
     <Property Name="room_type" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="notes" Type="nvarchar" MaxLength="100" />
     <Property Name="statuss" Type="nvarchar" MaxLength="100" />
+    <Property Name="price_per_day" Type="float" />
+    <Property Name="price_per_month" Type="float" />
+    <Property Name="room_address" Type="nvarchar" MaxLength="100" />
+    <Property Name="area" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="ROOMTYPE">
     <Key>
@@ -82,7 +99,17 @@ warning 6013: The table/view 'QLDuLich.dbo.AMOUNT' does not have a primary key d
     <Property Name="room_type" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="price" Type="money" />
   </EntityType>
-  <Association Name="FK__BILL_DETA__id_bi__48CFD27E">
+  <EntityType Name="SERVICE">
+    <Key>
+      <PropertyRef Name="id_service" />
+    </Key>
+    <Property Name="id_service" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="service_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="unit_price" Type="float" />
+    <Property Name="into_money" Type="float" />
+  </EntityType>
+  <Association Name="FK__BILL_DETA__id_bi__3B75D760">
     <End Role="BILL" Type="Self.BILL" Multiplicity="1" />
     <End Role="BILL_DETAILS" Type="Self.BILL_DETAILS" Multiplicity="*" />
     <ReferentialConstraint>
@@ -94,7 +121,7 @@ warning 6013: The table/view 'QLDuLich.dbo.AMOUNT' does not have a primary key d
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BILL_DETA__id_ch__49C3F6B7">
+  <Association Name="FK__BILL_DETA__id_ch__3C69FB99">
     <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="1" />
     <End Role="BILL_DETAILS" Type="Self.BILL_DETAILS" Multiplicity="*" />
     <ReferentialConstraint>
@@ -106,7 +133,19 @@ warning 6013: The table/view 'QLDuLich.dbo.AMOUNT' does not have a primary key d
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CHECKIN__id_room__403A8C7D">
+  <Association Name="FK__CUSTOMER__custom__31EC6D26">
+    <End Role="CUSTOMER_TYPE" Type="Self.CUSTOMER_TYPE" Multiplicity="0..1" />
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER_TYPE">
+        <PropertyRef Name="customer_type" />
+      </Principal>
+      <Dependent Role="CUSTOMER">
+        <PropertyRef Name="customer_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHECKIN__id_room__2F10007B">
     <End Role="ROOM" Type="Self.ROOM" Multiplicity="0..1" />
     <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="*" />
     <ReferentialConstraint>
@@ -118,7 +157,7 @@ warning 6013: The table/view 'QLDuLich.dbo.AMOUNT' does not have a primary key d
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CHECKIN_D__custo__4316F928">
+  <Association Name="FK__CHECKIN_D__custo__34C8D9D1">
     <End Role="CUSTOMER_TYPE" Type="Self.CUSTOMER_TYPE" Multiplicity="0..1" />
     <End Role="CHECKIN_DETAILS" Type="Self.CHECKIN_DETAILS" Multiplicity="*" />
     <ReferentialConstraint>
@@ -130,7 +169,19 @@ warning 6013: The table/view 'QLDuLich.dbo.AMOUNT' does not have a primary key d
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CHECKIN_D__id_ch__440B1D61">
+  <Association Name="FK__CHECKIN_D__id_cu__36B12243">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="0..1" />
+    <End Role="CHECKIN_DETAILS" Type="Self.CHECKIN_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="id_customer" />
+      </Principal>
+      <Dependent Role="CHECKIN_DETAILS">
+        <PropertyRef Name="id_customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHECKIN_D__id_ch__35BCFE0A">
     <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="0..1" />
     <End Role="CHECKIN_DETAILS" Type="Self.CHECKIN_DETAILS" Multiplicity="*" />
     <ReferentialConstraint>
@@ -142,7 +193,7 @@ warning 6013: The table/view 'QLDuLich.dbo.AMOUNT' does not have a primary key d
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ROOM__room_type__3B75D760">
+  <Association Name="FK__ROOM__room_type__29572725">
     <End Role="ROOMTYPE" Type="Self.ROOMTYPE" Multiplicity="1" />
     <End Role="ROOM" Type="Self.ROOM" Multiplicity="*" />
     <ReferentialConstraint>
@@ -154,38 +205,64 @@ warning 6013: The table/view 'QLDuLich.dbo.AMOUNT' does not have a primary key d
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__SERVICE__id_serv__3F466844">
+    <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="1" />
+    <End Role="SERVICE" Type="Self.SERVICE" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CHECKIN">
+        <PropertyRef Name="id_checkin" />
+      </Principal>
+      <Dependent Role="SERVICE">
+        <PropertyRef Name="id_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="QLDuLichModelStoreContainer">
     <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BILL" EntityType="Self.BILL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BILL_DETAILS" EntityType="Self.BILL_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUSTOMER" EntityType="Self.CUSTOMER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUSTOMER_TYPE" EntityType="Self.CUSTOMER_TYPE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHECKIN" EntityType="Self.CHECKIN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHECKIN_DETAILS" EntityType="Self.CHECKIN_DETAILS" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="CUSTOMER_TYPE" EntityType="Self.CUSTOMER_TYPE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ROOM" EntityType="Self.ROOM" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ROOMTYPE" EntityType="Self.ROOMTYPE" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__BILL_DETA__id_bi__48CFD27E" Association="Self.FK__BILL_DETA__id_bi__48CFD27E">
+    <EntitySet Name="SERVICE" EntityType="Self.SERVICE" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__BILL_DETA__id_bi__3B75D760" Association="Self.FK__BILL_DETA__id_bi__3B75D760">
       <End Role="BILL" EntitySet="BILL" />
       <End Role="BILL_DETAILS" EntitySet="BILL_DETAILS" />
     </AssociationSet>
-    <AssociationSet Name="FK__BILL_DETA__id_ch__49C3F6B7" Association="Self.FK__BILL_DETA__id_ch__49C3F6B7">
+    <AssociationSet Name="FK__BILL_DETA__id_ch__3C69FB99" Association="Self.FK__BILL_DETA__id_ch__3C69FB99">
       <End Role="CHECKIN" EntitySet="CHECKIN" />
       <End Role="BILL_DETAILS" EntitySet="BILL_DETAILS" />
     </AssociationSet>
-    <AssociationSet Name="FK__CHECKIN__id_room__403A8C7D" Association="Self.FK__CHECKIN__id_room__403A8C7D">
+    <AssociationSet Name="FK__CUSTOMER__custom__31EC6D26" Association="Self.FK__CUSTOMER__custom__31EC6D26">
+      <End Role="CUSTOMER_TYPE" EntitySet="CUSTOMER_TYPE" />
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHECKIN__id_room__2F10007B" Association="Self.FK__CHECKIN__id_room__2F10007B">
       <End Role="ROOM" EntitySet="ROOM" />
       <End Role="CHECKIN" EntitySet="CHECKIN" />
     </AssociationSet>
-    <AssociationSet Name="FK__CHECKIN_D__custo__4316F928" Association="Self.FK__CHECKIN_D__custo__4316F928">
+    <AssociationSet Name="FK__CHECKIN_D__custo__34C8D9D1" Association="Self.FK__CHECKIN_D__custo__34C8D9D1">
       <End Role="CUSTOMER_TYPE" EntitySet="CUSTOMER_TYPE" />
       <End Role="CHECKIN_DETAILS" EntitySet="CHECKIN_DETAILS" />
     </AssociationSet>
-    <AssociationSet Name="FK__CHECKIN_D__id_ch__440B1D61" Association="Self.FK__CHECKIN_D__id_ch__440B1D61">
+    <AssociationSet Name="FK__CHECKIN_D__id_cu__36B12243" Association="Self.FK__CHECKIN_D__id_cu__36B12243">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="CHECKIN_DETAILS" EntitySet="CHECKIN_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHECKIN_D__id_ch__35BCFE0A" Association="Self.FK__CHECKIN_D__id_ch__35BCFE0A">
       <End Role="CHECKIN" EntitySet="CHECKIN" />
       <End Role="CHECKIN_DETAILS" EntitySet="CHECKIN_DETAILS" />
     </AssociationSet>
-    <AssociationSet Name="FK__ROOM__room_type__3B75D760" Association="Self.FK__ROOM__room_type__3B75D760">
+    <AssociationSet Name="FK__ROOM__room_type__29572725" Association="Self.FK__ROOM__room_type__29572725">
       <End Role="ROOMTYPE" EntitySet="ROOMTYPE" />
       <End Role="ROOM" EntitySet="ROOM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SERVICE__id_serv__3F466844" Association="Self.FK__SERVICE__id_serv__3F466844">
+      <End Role="CHECKIN" EntitySet="CHECKIN" />
+      <End Role="SERVICE" EntitySet="SERVICE" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

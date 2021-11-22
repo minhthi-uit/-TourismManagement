@@ -18,6 +18,7 @@ namespace DAL
         public CUSTOMER_TYPE()
         {
             this.CHECKIN_DETAILS = new HashSet<CHECKIN_DETAILS>();
+            this.CUSTOMERs = new HashSet<CUSTOMER>();
         }
     
         public string customer_type1 { get; set; }
@@ -25,5 +26,7 @@ namespace DAL
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHECKIN_DETAILS> CHECKIN_DETAILS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CUSTOMER> CUSTOMERs { get; set; }
     }
 }

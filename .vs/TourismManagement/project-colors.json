@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e6862c09-aa98-4e52-aa45-65fe881e7322": {
+      "ProjectGuid": "e6862c09-aa98-4e52-aa45-65fe881e7322",
+      "DisplayName": "TourismManagement",
+      "ColorIndex": 0
+    },
+    "4cc1f727-eff3-42ef-a88a-86dfc2fc609a": {
+      "ProjectGuid": "4cc1f727-eff3-42ef-a88a-86dfc2fc609a",
+      "DisplayName": "DAL",
+      "ColorIndex": 1
+    },
+    "d2dfa39f-1f76-4969-9164-0f2d212e3d40": {
+      "ProjectGuid": "d2dfa39f-1f76-4969-9164-0f2d212e3d40",
+      "DisplayName": "BUS",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

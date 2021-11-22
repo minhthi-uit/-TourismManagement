@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DAL",
+    "\\TourismManagement"
   ],
-  "SelectedNode": "\\TourismManagement.sln",
+  "SelectedNode": "\\TourismManagement\\ucEmployee.cs",
   "PreviewInSolutionExplorer": false
 }

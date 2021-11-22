@@ -29,33 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
-            this.label_tieude = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel_top = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label_tieude = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button_thoat = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel_Menu = new System.Windows.Forms.Panel();
-            this.button_trangchu = new System.Windows.Forms.Button();
-            this.button_phong = new System.Windows.Forms.Button();
-            this.button_hoadon = new System.Windows.Forms.Button();
-            this.button_phieuthue = new System.Windows.Forms.Button();
-            this.button_doanhthu = new System.Windows.Forms.Button();
-            this.button_thietlap = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnRoom = new System.Windows.Forms.Button();
+            this.btnBill = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.btnRevenue = new System.Windows.Forms.Button();
+            this.btnSetting = new System.Windows.Forms.Button();
             this.panel_left = new System.Windows.Forms.Panel();
-            this.button_thugon = new System.Windows.Forms.Button();
+            this.btnThu = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button_exit = new System.Windows.Forms.Button();
-            this.button_cuaso = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_congcu = new System.Windows.Forms.Panel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btn1 = new System.Windows.Forms.Button();
+            this.btnWindow = new System.Windows.Forms.Button();
+            this.btnExit1 = new System.Windows.Forms.Button();
+            this.ucSale1 = new TourismManagement.ucSale();
+            this.ucBill1 = new TourismManagement.ucBill();
+            this.ucHome1 = new TourismManagement.ucHome();
+            this.ucRoom1 = new TourismManagement.ucRoom();
+            this.ucCustomer1 = new TourismManagement.ucCustomer();
             this.panel_top.SuspendLayout();
             this.panel_Menu.SuspendLayout();
             this.panel_left.SuspendLayout();
@@ -63,25 +68,13 @@
             this.panel_congcu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label_tieude
-            // 
-            this.label_tieude.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_tieude.AutoSize = true;
-            this.label_tieude.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_tieude.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.label_tieude.Location = new System.Drawing.Point(708, 15);
-            this.label_tieude.Name = "label_tieude";
-            this.label_tieude.Size = new System.Drawing.Size(173, 32);
-            this.label_tieude.TabIndex = 0;
-            this.label_tieude.Text = "Home Page";
-            // 
             // panel_top
             // 
             this.panel_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
             this.panel_top.Controls.Add(this.label2);
             this.panel_top.Controls.Add(this.label_tieude);
             this.panel_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_top.Location = new System.Drawing.Point(467, 59);
+            this.panel_top.Location = new System.Drawing.Point(467, 52);
             this.panel_top.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_top.Name = "panel_top";
             this.panel_top.Size = new System.Drawing.Size(1457, 62);
@@ -95,6 +88,18 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1457, 2);
             this.label2.TabIndex = 18;
+            // 
+            // label_tieude
+            // 
+            this.label_tieude.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_tieude.AutoSize = true;
+            this.label_tieude.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tieude.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.label_tieude.Location = new System.Drawing.Point(708, 15);
+            this.label_tieude.Name = "label_tieude";
+            this.label_tieude.Size = new System.Drawing.Size(164, 32);
+            this.label_tieude.TabIndex = 0;
+            this.label_tieude.Text = "HomePage";
             // 
             // panel3
             // 
@@ -114,22 +119,23 @@
             this.panel2.Size = new System.Drawing.Size(11, 78);
             this.panel2.TabIndex = 23;
             // 
-            // button_thoat
+            // btnExit
             // 
-            this.button_thoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_thoat.FlatAppearance.BorderSize = 0;
-            this.button_thoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_thoat.ForeColor = System.Drawing.Color.White;
-            this.button_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_thoat.Location = new System.Drawing.Point(3, 949);
-            this.button_thoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_thoat.Name = "button_thoat";
-            this.button_thoat.Size = new System.Drawing.Size(459, 68);
-            this.button_thoat.TabIndex = 28;
-            this.button_thoat.Text = "Exit";
-            this.button_thoat.UseVisualStyleBackColor = true;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(3, 949);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(459, 68);
+            this.btnExit.TabIndex = 28;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel1
             // 
@@ -146,7 +152,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
             this.label3.Location = new System.Drawing.Point(464, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(3, 1021);
+            this.label3.Size = new System.Drawing.Size(3, 1028);
             this.label3.TabIndex = 18;
             // 
             // panel5
@@ -169,175 +175,180 @@
             // 
             // panel_Menu
             // 
-            this.panel_Menu.Controls.Add(this.button_trangchu);
-            this.panel_Menu.Controls.Add(this.button_phong);
-            this.panel_Menu.Controls.Add(this.button_hoadon);
-            this.panel_Menu.Controls.Add(this.button_phieuthue);
-            this.panel_Menu.Controls.Add(this.button_doanhthu);
-            this.panel_Menu.Controls.Add(this.button_thietlap);
+            this.panel_Menu.Controls.Add(this.btnHome);
+            this.panel_Menu.Controls.Add(this.btnRoom);
+            this.panel_Menu.Controls.Add(this.btnBill);
+            this.panel_Menu.Controls.Add(this.btnCustomer);
+            this.panel_Menu.Controls.Add(this.btnRevenue);
+            this.panel_Menu.Controls.Add(this.btnSetting);
             this.panel_Menu.Location = new System.Drawing.Point(12, 347);
             this.panel_Menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_Menu.Name = "panel_Menu";
             this.panel_Menu.Size = new System.Drawing.Size(452, 596);
             this.panel_Menu.TabIndex = 29;
             // 
-            // button_trangchu
+            // btnHome
             // 
-            this.button_trangchu.BackColor = System.Drawing.Color.Orange;
-            this.button_trangchu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_trangchu.FlatAppearance.BorderSize = 0;
-            this.button_trangchu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
-            this.button_trangchu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button_trangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_trangchu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_trangchu.ForeColor = System.Drawing.Color.White;
-            this.button_trangchu.Image = ((System.Drawing.Image)(resources.GetObject("button_trangchu.Image")));
-            this.button_trangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_trangchu.Location = new System.Drawing.Point(0, 0);
-            this.button_trangchu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_trangchu.Name = "button_trangchu";
-            this.button_trangchu.Size = new System.Drawing.Size(449, 78);
-            this.button_trangchu.TabIndex = 21;
-            this.button_trangchu.Text = "Home";
-            this.button_trangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_trangchu.UseVisualStyleBackColor = false;
+            this.btnHome.BackColor = System.Drawing.Color.Orange;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(449, 78);
+            this.btnHome.TabIndex = 21;
+            this.btnHome.Text = "  Home";
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // button_phong
+            // btnRoom
             // 
-            this.button_phong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_phong.FlatAppearance.BorderSize = 0;
-            this.button_phong.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
-            this.button_phong.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button_phong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_phong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_phong.ForeColor = System.Drawing.Color.White;
-            this.button_phong.Image = ((System.Drawing.Image)(resources.GetObject("button_phong.Image")));
-            this.button_phong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_phong.Location = new System.Drawing.Point(0, 84);
-            this.button_phong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_phong.Name = "button_phong";
-            this.button_phong.Size = new System.Drawing.Size(449, 78);
-            this.button_phong.TabIndex = 23;
-            this.button_phong.Text = "Room";
-            this.button_phong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_phong.UseVisualStyleBackColor = true;
-            this.button_phong.Click += new System.EventHandler(this.button_phong_Click);
+            this.btnRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRoom.FlatAppearance.BorderSize = 0;
+            this.btnRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnRoom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.btnRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoom.ForeColor = System.Drawing.Color.White;
+            this.btnRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnRoom.Image")));
+            this.btnRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRoom.Location = new System.Drawing.Point(0, 84);
+            this.btnRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRoom.Name = "btnRoom";
+            this.btnRoom.Size = new System.Drawing.Size(449, 78);
+            this.btnRoom.TabIndex = 23;
+            this.btnRoom.Text = "  Room";
+            this.btnRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRoom.UseVisualStyleBackColor = true;
+            this.btnRoom.Click += new System.EventHandler(this.btnRoom_Click);
             // 
-            // button_hoadon
+            // btnBill
             // 
-            this.button_hoadon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_hoadon.FlatAppearance.BorderSize = 0;
-            this.button_hoadon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
-            this.button_hoadon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button_hoadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_hoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_hoadon.ForeColor = System.Drawing.Color.White;
-            this.button_hoadon.Image = ((System.Drawing.Image)(resources.GetObject("button_hoadon.Image")));
-            this.button_hoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_hoadon.Location = new System.Drawing.Point(0, 167);
-            this.button_hoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_hoadon.Name = "button_hoadon";
-            this.button_hoadon.Size = new System.Drawing.Size(449, 78);
-            this.button_hoadon.TabIndex = 24;
-            this.button_hoadon.Text = "Bill";
-            this.button_hoadon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_hoadon.UseVisualStyleBackColor = true;
+            this.btnBill.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBill.FlatAppearance.BorderSize = 0;
+            this.btnBill.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnBill.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.btnBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBill.ForeColor = System.Drawing.Color.White;
+            this.btnBill.Image = ((System.Drawing.Image)(resources.GetObject("btnBill.Image")));
+            this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBill.Location = new System.Drawing.Point(0, 167);
+            this.btnBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Size = new System.Drawing.Size(449, 78);
+            this.btnBill.TabIndex = 24;
+            this.btnBill.Text = "  Bill";
+            this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBill.UseVisualStyleBackColor = true;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
-            // button_phieuthue
+            // btnCustomer
             // 
-            this.button_phieuthue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_phieuthue.FlatAppearance.BorderSize = 0;
-            this.button_phieuthue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
-            this.button_phieuthue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button_phieuthue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_phieuthue.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_phieuthue.ForeColor = System.Drawing.Color.White;
-            this.button_phieuthue.Image = ((System.Drawing.Image)(resources.GetObject("button_phieuthue.Image")));
-            this.button_phieuthue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_phieuthue.Location = new System.Drawing.Point(0, 252);
-            this.button_phieuthue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_phieuthue.Name = "button_phieuthue";
-            this.button_phieuthue.Size = new System.Drawing.Size(449, 78);
-            this.button_phieuthue.TabIndex = 25;
-            this.button_phieuthue.Text = "Rental Voucher";
-            this.button_phieuthue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_phieuthue.UseVisualStyleBackColor = true;
+            this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 252);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(449, 78);
+            this.btnCustomer.TabIndex = 25;
+            this.btnCustomer.Text = "  Customer";
+            this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
-            // button_doanhthu
+            // btnRevenue
             // 
-            this.button_doanhthu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_doanhthu.FlatAppearance.BorderSize = 0;
-            this.button_doanhthu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
-            this.button_doanhthu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button_doanhthu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_doanhthu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_doanhthu.ForeColor = System.Drawing.Color.White;
-            this.button_doanhthu.Image = ((System.Drawing.Image)(resources.GetObject("button_doanhthu.Image")));
-            this.button_doanhthu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_doanhthu.Location = new System.Drawing.Point(0, 420);
-            this.button_doanhthu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_doanhthu.Name = "button_doanhthu";
-            this.button_doanhthu.Size = new System.Drawing.Size(449, 78);
-            this.button_doanhthu.TabIndex = 26;
-            this.button_doanhthu.Text = "Revenue";
-            this.button_doanhthu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_doanhthu.UseVisualStyleBackColor = true;
+            this.btnRevenue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRevenue.FlatAppearance.BorderSize = 0;
+            this.btnRevenue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnRevenue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.btnRevenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRevenue.ForeColor = System.Drawing.Color.White;
+            this.btnRevenue.Image = ((System.Drawing.Image)(resources.GetObject("btnRevenue.Image")));
+            this.btnRevenue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRevenue.Location = new System.Drawing.Point(1, 421);
+            this.btnRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRevenue.Name = "btnRevenue";
+            this.btnRevenue.Size = new System.Drawing.Size(449, 78);
+            this.btnRevenue.TabIndex = 26;
+            this.btnRevenue.Text = "  Revenue";
+            this.btnRevenue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRevenue.UseVisualStyleBackColor = true;
+            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
-            // button_thietlap
+            // btnSetting
             // 
-            this.button_thietlap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_thietlap.FlatAppearance.BorderSize = 0;
-            this.button_thietlap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
-            this.button_thietlap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
-            this.button_thietlap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_thietlap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_thietlap.ForeColor = System.Drawing.Color.White;
-            this.button_thietlap.Image = ((System.Drawing.Image)(resources.GetObject("button_thietlap.Image")));
-            this.button_thietlap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_thietlap.Location = new System.Drawing.Point(-3, 337);
-            this.button_thietlap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_thietlap.Name = "button_thietlap";
-            this.button_thietlap.Size = new System.Drawing.Size(449, 78);
-            this.button_thietlap.TabIndex = 27;
-            this.button_thietlap.Text = "Setting";
-            this.button_thietlap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_thietlap.UseVisualStyleBackColor = true;
+            this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(70)))));
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.ForeColor = System.Drawing.Color.White;
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetting.Location = new System.Drawing.Point(-3, 337);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(449, 78);
+            this.btnSetting.TabIndex = 27;
+            this.btnSetting.Text = "  Setting";
+            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSetting.UseVisualStyleBackColor = true;
             // 
             // panel_left
             // 
             this.panel_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
-            this.panel_left.Controls.Add(this.button_thugon);
+            this.panel_left.Controls.Add(this.btnThu);
             this.panel_left.Controls.Add(this.panel_Menu);
             this.panel_left.Controls.Add(this.panel6);
             this.panel_left.Controls.Add(this.panel5);
             this.panel_left.Controls.Add(this.panel4);
             this.panel_left.Controls.Add(this.panel3);
             this.panel_left.Controls.Add(this.panel2);
-            this.panel_left.Controls.Add(this.button_thoat);
+            this.panel_left.Controls.Add(this.btnExit);
             this.panel_left.Controls.Add(this.panel1);
             this.panel_left.Controls.Add(this.pictureBox1);
             this.panel_left.Controls.Add(this.label3);
             this.panel_left.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_left.Location = new System.Drawing.Point(0, 59);
+            this.panel_left.Location = new System.Drawing.Point(0, 52);
             this.panel_left.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_left.Name = "panel_left";
-            this.panel_left.Size = new System.Drawing.Size(467, 1021);
+            this.panel_left.Size = new System.Drawing.Size(467, 1028);
             this.panel_left.TabIndex = 19;
             // 
-            // button_thugon
+            // btnThu
             // 
-            this.button_thugon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_thugon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_thugon.FlatAppearance.BorderSize = 0;
-            this.button_thugon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_thugon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_thugon.Image = ((System.Drawing.Image)(resources.GetObject("button_thugon.Image")));
-            this.button_thugon.Location = new System.Drawing.Point(377, 2);
-            this.button_thugon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_thugon.Name = "button_thugon";
-            this.button_thugon.Size = new System.Drawing.Size(83, 52);
-            this.button_thugon.TabIndex = 30;
-            this.button_thugon.UseVisualStyleBackColor = true;
+            this.btnThu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThu.FlatAppearance.BorderSize = 0;
+            this.btnThu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThu.Image = ((System.Drawing.Image)(resources.GetObject("btnThu.Image")));
+            this.btnThu.Location = new System.Drawing.Point(377, 2);
+            this.btnThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThu.Name = "btnThu";
+            this.btnThu.Size = new System.Drawing.Size(83, 52);
+            this.btnThu.TabIndex = 30;
+            this.btnThu.UseVisualStyleBackColor = true;
+            this.btnThu.Click += new System.EventHandler(this.btnThu_Click);
             // 
             // panel6
             // 
@@ -359,62 +370,14 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // button_exit
-            // 
-            this.button_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_exit.FlatAppearance.BorderSize = 0;
-            this.button_exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_exit.Image = ((System.Drawing.Image)(resources.GetObject("button_exit.Image")));
-            this.button_exit.Location = new System.Drawing.Point(1857, 0);
-            this.button_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(67, 52);
-            this.button_exit.TabIndex = 14;
-            this.button_exit.UseVisualStyleBackColor = true;
-            // 
-            // button_cuaso
-            // 
-            this.button_cuaso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_cuaso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_cuaso.FlatAppearance.BorderSize = 0;
-            this.button_cuaso.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_cuaso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button_cuaso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_cuaso.Image = ((System.Drawing.Image)(resources.GetObject("button_cuaso.Image")));
-            this.button_cuaso.Location = new System.Drawing.Point(1793, 0);
-            this.button_cuaso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_cuaso.Name = "button_cuaso";
-            this.button_cuaso.Size = new System.Drawing.Size(67, 52);
-            this.button_cuaso.TabIndex = 15;
-            this.button_cuaso.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1732, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 52);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(866, 12);
+            this.label1.Location = new System.Drawing.Point(861, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(310, 26);
+            this.label1.Size = new System.Drawing.Size(305, 25);
             this.label1.TabIndex = 17;
             this.label1.Text = "TOURISM MANAGEMENT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -423,15 +386,100 @@
             // 
             this.panel_congcu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(87)))));
             this.panel_congcu.Controls.Add(this.label1);
-            this.panel_congcu.Controls.Add(this.button1);
-            this.panel_congcu.Controls.Add(this.button_cuaso);
-            this.panel_congcu.Controls.Add(this.button_exit);
+            this.panel_congcu.Controls.Add(this.btn1);
+            this.panel_congcu.Controls.Add(this.btnWindow);
+            this.panel_congcu.Controls.Add(this.btnExit1);
             this.panel_congcu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_congcu.Location = new System.Drawing.Point(0, 0);
             this.panel_congcu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_congcu.Name = "panel_congcu";
-            this.panel_congcu.Size = new System.Drawing.Size(1924, 59);
+            this.panel_congcu.Size = new System.Drawing.Size(1924, 52);
             this.panel_congcu.TabIndex = 18;
+            // 
+            // btn1
+            // 
+            this.btn1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn1.FlatAppearance.BorderSize = 0;
+            this.btn1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.Image = ((System.Drawing.Image)(resources.GetObject("btn1.Image")));
+            this.btn1.Location = new System.Drawing.Point(1732, 0);
+            this.btn1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(67, 52);
+            this.btn1.TabIndex = 16;
+            this.btn1.UseVisualStyleBackColor = true;
+            // 
+            // btnWindow
+            // 
+            this.btnWindow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWindow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWindow.FlatAppearance.BorderSize = 0;
+            this.btnWindow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnWindow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.btnWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWindow.Image = ((System.Drawing.Image)(resources.GetObject("btnWindow.Image")));
+            this.btnWindow.Location = new System.Drawing.Point(1793, 0);
+            this.btnWindow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnWindow.Name = "btnWindow";
+            this.btnWindow.Size = new System.Drawing.Size(67, 52);
+            this.btnWindow.TabIndex = 15;
+            this.btnWindow.UseVisualStyleBackColor = true;
+            // 
+            // btnExit1
+            // 
+            this.btnExit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit1.FlatAppearance.BorderSize = 0;
+            this.btnExit1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnExit1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnExit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit1.Image = ((System.Drawing.Image)(resources.GetObject("btnExit1.Image")));
+            this.btnExit1.Location = new System.Drawing.Point(1857, 0);
+            this.btnExit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit1.Name = "btnExit1";
+            this.btnExit1.Size = new System.Drawing.Size(67, 52);
+            this.btnExit1.TabIndex = 14;
+            this.btnExit1.UseVisualStyleBackColor = true;
+            this.btnExit1.Click += new System.EventHandler(this.btnExit1_Click);
+            // 
+            // ucSale1
+            // 
+            this.ucSale1.Location = new System.Drawing.Point(467, 114);
+            this.ucSale1.Name = "ucSale1";
+            this.ucSale1.Size = new System.Drawing.Size(1616, 956);
+            this.ucSale1.TabIndex = 24;
+            // 
+            // ucBill1
+            // 
+            this.ucBill1.Location = new System.Drawing.Point(467, 112);
+            this.ucBill1.Name = "ucBill1";
+            this.ucBill1.Size = new System.Drawing.Size(1616, 956);
+            this.ucBill1.TabIndex = 23;
+            // 
+            // ucHome1
+            // 
+            this.ucHome1.Location = new System.Drawing.Point(467, 117);
+            this.ucHome1.Name = "ucHome1";
+            this.ucHome1.Size = new System.Drawing.Size(1616, 956);
+            this.ucHome1.TabIndex = 22;
+            // 
+            // ucRoom1
+            // 
+            this.ucRoom1.Location = new System.Drawing.Point(470, 113);
+            this.ucRoom1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ucRoom1.Name = "ucRoom1";
+            this.ucRoom1.Size = new System.Drawing.Size(1616, 956);
+            this.ucRoom1.TabIndex = 21;
+            // 
+            // ucCustomer1
+            // 
+            this.ucCustomer1.Location = new System.Drawing.Point(467, 113);
+            this.ucCustomer1.Name = "ucCustomer1";
+            this.ucCustomer1.Size = new System.Drawing.Size(1616, 956);
+            this.ucCustomer1.TabIndex = 25;
             // 
             // HomePage
             // 
@@ -439,6 +487,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1080);
             this.ControlBox = false;
+            this.Controls.Add(this.ucCustomer1);
+            this.Controls.Add(this.ucSale1);
+            this.Controls.Add(this.ucBill1);
+            this.Controls.Add(this.ucHome1);
+            this.Controls.Add(this.ucRoom1);
             this.Controls.Add(this.panel_top);
             this.Controls.Add(this.panel_left);
             this.Controls.Add(this.panel_congcu);
@@ -459,38 +512,40 @@
         }
 
         #endregion
-        private RoomManagement ucRoom;
-        //private ucRoom ucRoom1;
-        //private ucBill ucBill1;
-        //private ucCheckin ucCheckin1;
-        //private ucRevenue ucRevenue1;
-        //private ucAccount ucAccount1;
-        private System.Windows.Forms.Label label_tieude;
+        private ucHome home1;
+        private fRentRoom rentApartment1;
+        private ucBill billManagement1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel_top;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_tieude;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button_thoat;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button_trangchu;
-        private System.Windows.Forms.Button button_phong;
-        private System.Windows.Forms.Button button_hoadon;
-        private System.Windows.Forms.Button button_phieuthue;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnRoom;
+        private System.Windows.Forms.Button btnBill;
+        private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button_doanhthu;
-        private System.Windows.Forms.Button button_thietlap;
-        private System.Windows.Forms.Button button_thugon;
+        private System.Windows.Forms.Button btnRevenue;
+        private System.Windows.Forms.Button btnThu;
         private System.Windows.Forms.Panel panel_Menu;
+        private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Panel panel_left;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button_exit;
-        private System.Windows.Forms.Button button_cuaso;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btnWindow;
         private System.Windows.Forms.Panel panel_congcu;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnExit1;
+        private ucRoom ucRoom1;
+        private ucHome ucHome1;
+        private ucBill ucBill1;
+        private ucSale ucSale1;
+        private ucCustomer ucCustomer1;
     }
 }

@@ -46,6 +46,7 @@
     <NavigationProperty Name="BILL_DETAILS" Relationship="Self.FK__BILL_DETA__id_ch__49C3F6B7" FromRole="CHECKIN" ToRole="BILL_DETAILS" />
     <NavigationProperty Name="ROOM" Relationship="Self.FK__CHECKIN__id_room__403A8C7D" FromRole="CHECKIN" ToRole="ROOM" />
     <NavigationProperty Name="CHECKIN_DETAILS" Relationship="Self.FK__CHECKIN_D__id_ch__440B1D61" FromRole="CHECKIN" ToRole="CHECKIN_DETAILS" />
+    <NavigationProperty Name="SERVICE" Relationship="QLDuLichModel.FK__SERVICE__id_serv__3F466844" FromRole="CHECKIN" ToRole="SERVICE" />
   </EntityType>
   <EntityType Name="CHECKIN_DETAILS">
     <Key>
@@ -59,6 +60,9 @@
     <Property Name="id_checkin" Type="Int32" />
     <NavigationProperty Name="CHECKIN" Relationship="Self.FK__CHECKIN_D__id_ch__440B1D61" FromRole="CHECKIN_DETAILS" ToRole="CHECKIN" />
     <NavigationProperty Name="CUSTOMER_TYPE1" Relationship="Self.FK__CHECKIN_D__custo__4316F928" FromRole="CHECKIN_DETAILS" ToRole="CUSTOMER_TYPE" />
+    <Property Name="customer_phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="id_customer" Type="Int32" />
+    <NavigationProperty Name="CUSTOMER" Relationship="QLDuLichModel.FK__CHECKIN_D__id_cu__36B12243" FromRole="CHECKIN_DETAILS" ToRole="CUSTOMER" />
   </EntityType>
   <EntityType Name="CUSTOMER_TYPE">
     <Key>
@@ -67,6 +71,7 @@
     <Property Name="customer_type1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ratio" Type="Double" />
     <NavigationProperty Name="CHECKIN_DETAILS" Relationship="Self.FK__CHECKIN_D__custo__4316F928" FromRole="CUSTOMER_TYPE" ToRole="CHECKIN_DETAILS" />
+    <NavigationProperty Name="CUSTOMERs" Relationship="QLDuLichModel.FK__CUSTOMER__custom__31EC6D26" FromRole="CUSTOMER_TYPE" ToRole="CUSTOMER" />
   </EntityType>
   <EntityType Name="ROOM">
     <Key>
@@ -78,6 +83,10 @@
     <Property Name="statuss" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="CHECKINs" Relationship="Self.FK__CHECKIN__id_room__403A8C7D" FromRole="ROOM" ToRole="CHECKIN" />
     <NavigationProperty Name="ROOMTYPE" Relationship="Self.FK__ROOM__room_type__3B75D760" FromRole="ROOM" ToRole="ROOMTYPE" />
+    <Property Name="price_per_day" Type="Double" />
+    <Property Name="price_per_month" Type="Double" />
+    <Property Name="room_address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="area" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="ROOMTYPE">
     <Key>
@@ -192,5 +201,79 @@
       <End Role="ROOMTYPE" EntitySet="ROOMTYPEs" />
       <End Role="ROOM" EntitySet="ROOMs" />
     </AssociationSet>
+    <EntitySet Name="CUSTOMERs" EntityType="QLDuLichModel.CUSTOMER" />
+    <EntitySet Name="SERVICEs" EntityType="QLDuLichModel.SERVICE" />
+    <AssociationSet Name="FK__CUSTOMER__custom__31EC6D26" Association="QLDuLichModel.FK__CUSTOMER__custom__31EC6D26">
+      <End Role="CUSTOMER_TYPE" EntitySet="CUSTOMER_TYPE" />
+      <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHECKIN_D__id_cu__36B12243" Association="QLDuLichModel.FK__CHECKIN_D__id_cu__36B12243">
+      <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
+      <End Role="CHECKIN_DETAILS" EntitySet="CHECKIN_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SERVICE__id_serv__3F466844" Association="QLDuLichModel.FK__SERVICE__id_serv__3F466844">
+      <End Role="CHECKIN" EntitySet="CHECKINs" />
+      <End Role="SERVICE" EntitySet="SERVICEs" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="id_customer" />
+    </Key>
+    <Property Name="id_customer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="customer_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="customer_cmnd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="customer_address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="customer_phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CUSTOMER_TYPE1" Relationship="QLDuLichModel.FK__CUSTOMER__custom__31EC6D26" FromRole="CUSTOMER" ToRole="CUSTOMER_TYPE" />
+    <NavigationProperty Name="CHECKIN_DETAILS" Relationship="QLDuLichModel.FK__CHECKIN_D__id_cu__36B12243" FromRole="CUSTOMER" ToRole="CHECKIN_DETAILS" />
+  </EntityType>
+  <EntityType Name="SERVICE">
+    <Key>
+      <PropertyRef Name="id_service" />
+    </Key>
+    <Property Name="id_service" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="service_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="unit_price" Type="Double" />
+    <Property Name="into_money" Type="Double" />
+    <NavigationProperty Name="CHECKIN" Relationship="QLDuLichModel.FK__SERVICE__id_serv__3F466844" FromRole="SERVICE" ToRole="CHECKIN" />
+  </EntityType>
+  <Association Name="FK__CUSTOMER__custom__31EC6D26">
+    <End Type="QLDuLichModel.CUSTOMER_TYPE" Role="CUSTOMER_TYPE" Multiplicity="0..1" />
+    <End Type="QLDuLichModel.CUSTOMER" Role="CUSTOMER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER_TYPE">
+        <PropertyRef Name="customer_type1" />
+      </Principal>
+      <Dependent Role="CUSTOMER">
+        <PropertyRef Name="customer_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHECKIN_D__id_cu__36B12243">
+    <End Type="QLDuLichModel.CUSTOMER" Role="CUSTOMER" Multiplicity="0..1" />
+    <End Type="QLDuLichModel.CHECKIN_DETAILS" Role="CHECKIN_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="id_customer" />
+      </Principal>
+      <Dependent Role="CHECKIN_DETAILS">
+        <PropertyRef Name="id_customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SERVICE__id_serv__3F466844">
+    <End Type="QLDuLichModel.CHECKIN" Role="CHECKIN" Multiplicity="1" />
+    <End Type="QLDuLichModel.SERVICE" Role="SERVICE" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CHECKIN">
+        <PropertyRef Name="id_checkin" />
+      </Principal>
+      <Dependent Role="SERVICE">
+        <PropertyRef Name="id_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

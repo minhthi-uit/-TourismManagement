@@ -24,6 +24,10 @@ namespace DAL
         public string room_type { get; set; }
         public string notes { get; set; }
         public string statuss { get; set; }
+        public Nullable<double> price_per_day { get; set; }
+        public Nullable<double> price_per_month { get; set; }
+        public string room_address { get; set; }
+        public string area { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHECKIN> CHECKINs { get; set; }

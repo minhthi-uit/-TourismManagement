@@ -37,3 +37,16 @@ C:\Users\My Hp\Source\Repos\-TourismManagement\BUS\obj\Debug\BUS.csproj.CoreComp
 C:\Users\My Hp\Source\Repos\-TourismManagement\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\My Hp\Source\Repos\-TourismManagement\BUS\obj\Debug\BUS.dll
 C:\Users\My Hp\Source\Repos\-TourismManagement\BUS\obj\Debug\BUS.pdb
+C:\Users\User\Source\Repos\-TourismManagement\BUS\bin\Debug\BUS.dll.config
+C:\Users\User\Source\Repos\-TourismManagement\BUS\bin\Debug\BUS.dll
+C:\Users\User\Source\Repos\-TourismManagement\BUS\bin\Debug\BUS.pdb
+C:\Users\User\Source\Repos\-TourismManagement\BUS\bin\Debug\DAL.dll
+C:\Users\User\Source\Repos\-TourismManagement\BUS\bin\Debug\EntityFramework.dll
+C:\Users\User\Source\Repos\-TourismManagement\BUS\bin\Debug\DAL.pdb
+C:\Users\User\Source\Repos\-TourismManagement\BUS\bin\Debug\DAL.dll.config
+C:\Users\User\Source\Repos\-TourismManagement\BUS\bin\Debug\EntityFramework.xml
+C:\Users\User\Source\Repos\-TourismManagement\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\-TourismManagement\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\-TourismManagement\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\User\Source\Repos\-TourismManagement\BUS\obj\Debug\BUS.dll
+C:\Users\User\Source\Repos\-TourismManagement\BUS\obj\Debug\BUS.pdb

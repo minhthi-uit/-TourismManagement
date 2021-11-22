@@ -56,17 +56,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApartmentManagement.cs">
+    <Compile Include="ucCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ApartmentManagement.Designer.cs">
-      <DependentUpon>ApartmentManagement.cs</DependentUpon>
+    <Compile Include="ucCustomer.Designer.cs">
+      <DependentUpon>ucCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="BillManagement.cs">
-      <SubType>Form</SubType>
+    <Compile Include="ucEmployee.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BillManagement.Designer.cs">
-      <DependentUpon>BillManagement.cs</DependentUpon>
+    <Compile Include="ucEmployee.Designer.cs">
+      <DependentUpon>ucEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucRoom.Designer.cs">
+      <DependentUpon>ucRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBill.Designer.cs">
+      <DependentUpon>ucBill.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerManagement.cs">
       <SubType>Form</SubType>
@@ -74,17 +86,11 @@
     <Compile Include="CustomerManagement.Designer.cs">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee manager.cs">
-      <SubType>Form</SubType>
+    <Compile Include="ucHome.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Employee manager.Designer.cs">
-      <DependentUpon>Employee manager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="ucHome.Designer.cs">
+      <DependentUpon>ucHome.cs</DependentUpon>
     </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
@@ -92,76 +98,67 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="RoomManagement.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="RoomManagement.Designer.cs">
-      <DependentUpon>RoomManagement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sales report.cs">
+    <Compile Include="fPayBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sales report.Designer.cs">
-      <DependentUpon>Sales report.cs</DependentUpon>
+    <Compile Include="fPayBill.Designer.cs">
+      <DependentUpon>fPayBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="PayApartment.cs">
+    <Compile Include="fRentRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PayApartment.Designer.cs">
-      <DependentUpon>PayApartment.cs</DependentUpon>
+    <Compile Include="fRentRoom.Designer.cs">
+      <DependentUpon>fRentRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="RentApartment.cs">
+    <Compile Include="ucSale.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RentApartment.Designer.cs">
-      <DependentUpon>RentApartment.cs</DependentUpon>
+    <Compile Include="ucSale.Designer.cs">
+      <DependentUpon>ucSale.cs</DependentUpon>
     </Compile>
-    <Compile Include="Service.cs">
+    <Compile Include="ucServices.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Service.Designer.cs">
-      <DependentUpon>Service.cs</DependentUpon>
+    <Compile Include="ucServices.Designer.cs">
+      <DependentUpon>ucServices.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignIn.cs">
+    <Compile Include="fSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignIn.Designer.cs">
-      <DependentUpon>SignIn.cs</DependentUpon>
+    <Compile Include="fSignIn.Designer.cs">
+      <DependentUpon>fSignIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUp.cs">
+    <Compile Include="fSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUp.Designer.cs">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <Compile Include="fSignUp.Designer.cs">
+      <DependentUpon>fSignUp.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ApartmentManagement.resx">
-      <DependentUpon>ApartmentManagement.cs</DependentUpon>
+    <EmbeddedResource Include="ucCustomer.resx">
+      <DependentUpon>ucCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BillManagement.resx">
-      <DependentUpon>BillManagement.cs</DependentUpon>
+    <EmbeddedResource Include="ucEmployee.resx">
+      <DependentUpon>ucEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucRoom.resx">
+      <DependentUpon>ucRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBill.resx">
+      <DependentUpon>ucBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerManagement.resx">
       <DependentUpon>CustomerManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee manager.resx">
-      <DependentUpon>Employee manager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="ucHome.resx">
+      <DependentUpon>ucHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RoomManagement.resx">
-      <DependentUpon>RoomManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sales report.resx">
-      <DependentUpon>Sales report.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PayApartment.resx">
-      <DependentUpon>PayApartment.cs</DependentUpon>
+    <EmbeddedResource Include="fPayBill.resx">
+      <DependentUpon>fPayBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -173,17 +170,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RentApartment.resx">
-      <DependentUpon>RentApartment.cs</DependentUpon>
+    <EmbeddedResource Include="fRentRoom.resx">
+      <DependentUpon>fRentRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Service.resx">
-      <DependentUpon>Service.cs</DependentUpon>
+    <EmbeddedResource Include="ucSale.resx">
+      <DependentUpon>ucSale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignIn.resx">
-      <DependentUpon>SignIn.cs</DependentUpon>
+    <EmbeddedResource Include="ucServices.resx">
+      <DependentUpon>ucServices.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <EmbeddedResource Include="fSignIn.resx">
+      <DependentUpon>fSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSignUp.resx">
+      <DependentUpon>fSignUp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

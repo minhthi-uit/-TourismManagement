@@ -65,9 +65,14 @@
     <Compile Include="CHECKIN_DETAILS.cs">
       <DependentUpon>QLDuLich.tt</DependentUpon>
     </Compile>
+    <Compile Include="CUSTOMER.cs">
+      <DependentUpon>QLDuLich.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDAL.cs" />
     <Compile Include="CUSTOMER_TYPE.cs">
       <DependentUpon>QLDuLich.tt</DependentUpon>
     </Compile>
+    <Compile Include="HomeDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLDuLich.Context.cs">
       <AutoGen>True</AutoGen>
@@ -88,6 +93,9 @@
       <DependentUpon>QLDuLich.tt</DependentUpon>
     </Compile>
     <Compile Include="ROOMTYPE.cs">
+      <DependentUpon>QLDuLich.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SERVICE.cs">
       <DependentUpon>QLDuLich.tt</DependentUpon>
     </Compile>
     <Compile Include="UserDAL.cs" />

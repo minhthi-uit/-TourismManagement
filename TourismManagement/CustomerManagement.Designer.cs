@@ -39,6 +39,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,10 +48,9 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtIdentityCard = new System.Windows.Forms.TextBox();
-            this.cbNationality = new System.Windows.Forms.ComboBox();
+            this.cbType = new System.Windows.Forms.ComboBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.tbAddress = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListOfCustomer)).BeginInit();
@@ -102,7 +102,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(29, 87);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 17);
+            this.label9.Size = new System.Drawing.Size(81, 16);
             this.label9.TabIndex = 3;
             this.label9.Text = "Identity Card";
             // 
@@ -111,7 +111,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(29, 34);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 17);
+            this.label8.Size = new System.Drawing.Size(68, 16);
             this.label8.TabIndex = 0;
             this.label8.Text = "Full Name";
             // 
@@ -133,7 +133,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(23, 166);
+            this.btnSearch.Location = new System.Drawing.Point(19, 135);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(93, 46);
@@ -141,6 +141,7 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDelete
             // 
@@ -148,7 +149,7 @@
             this.btnDelete.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(287, 166);
+            this.btnDelete.Location = new System.Drawing.Point(283, 135);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(93, 46);
@@ -156,6 +157,7 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // groupBox2
             // 
@@ -175,6 +177,22 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Function";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(150, 135);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(93, 46);
+            this.btnUpdate.TabIndex = 132;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label2
             // 
@@ -251,14 +269,14 @@
             this.txtIdentityCard.Size = new System.Drawing.Size(173, 22);
             this.txtIdentityCard.TabIndex = 8;
             // 
-            // cbNationality
+            // cbType
             // 
-            this.cbNationality.FormattingEnabled = true;
-            this.cbNationality.Location = new System.Drawing.Point(261, 39);
-            this.cbNationality.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbNationality.Name = "cbNationality";
-            this.cbNationality.Size = new System.Drawing.Size(159, 24);
-            this.cbNationality.TabIndex = 9;
+            this.cbType.FormattingEnabled = true;
+            this.cbType.Location = new System.Drawing.Point(261, 39);
+            this.cbType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(159, 24);
+            this.cbType.TabIndex = 9;
             // 
             // txtPhoneNumber
             // 
@@ -274,7 +292,7 @@
             this.groupBox1.Controls.Add(this.tbAddress);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtPhoneNumber);
-            this.groupBox1.Controls.Add(this.cbNationality);
+            this.groupBox1.Controls.Add(this.cbType);
             this.groupBox1.Controls.Add(this.txtIdentityCard);
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.txtID);
@@ -291,21 +309,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(154, 166);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(93, 46);
-            this.btnUpdate.TabIndex = 132;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // tbAddress
             // 
@@ -369,7 +372,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtIdentityCard;
-        private System.Windows.Forms.ComboBox cbNationality;
+        private System.Windows.Forms.ComboBox cbType;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbAddress;

@@ -94,3 +94,37 @@ C:\Users\My Hp\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\Touri
 C:\Users\My Hp\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.pdb
 C:\Users\My Hp\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.Home.resources
 C:\Users\My Hp\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.RoomManagement.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\TourismManagement.exe.config
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\TourismManagement.exe
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\TourismManagement.pdb
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\BUS.dll
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\DAL.dll
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\EntityFramework.dll
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\BUS.pdb
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\BUS.dll.config
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\DAL.pdb
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\DAL.dll.config
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\EntityFramework.xml
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.CustomerManagement.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.HomePage.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.Properties.Resources.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.Service.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.SinIn.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.SIGNUP.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.csproj.CopyComplete
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.exe
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.pdb
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucRoom.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucHome.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucBill.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucSale.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucCustomer.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucEmployee.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.fRentRoom.resources
+C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.fPayBill.resources

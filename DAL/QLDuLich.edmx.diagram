@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="18ed00ebe4154d6bb55f72e4b0162a17" Name="Diagram1">
         <EntityTypeShape EntityType="QLDuLichModel.ACCOUNT" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDuLichModel.BILL" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDuLichModel.BILL" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLDuLichModel.BILL_DETAILS" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLDuLichModel.CHECKIN" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLDuLichModel.CHECKIN_DETAILS" Width="1.5" PointX="10.5" PointY="3.25" IsExpanded="true" />
@@ -19,6 +19,11 @@
         <AssociationConnector Association="QLDuLichModel.FK__CHECKIN_D__id_ch__440B1D61" ManuallyRouted="false" />
         <AssociationConnector Association="QLDuLichModel.FK__CHECKIN_D__custo__4316F928" ManuallyRouted="false" />
         <AssociationConnector Association="QLDuLichModel.FK__ROOM__room_type__3B75D760" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QLDuLichModel.CUSTOMER" Width="1.5" PointX="10.5" PointY="7.5" />
+        <EntityTypeShape EntityType="QLDuLichModel.SERVICE" Width="1.5" PointX="7.5" PointY="6.625" />
+        <AssociationConnector Association="QLDuLichModel.FK__CUSTOMER__custom__31EC6D26" />
+        <AssociationConnector Association="QLDuLichModel.FK__CHECKIN_D__id_cu__36B12243" />
+        <AssociationConnector Association="QLDuLichModel.FK__SERVICE__id_serv__3F466844" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

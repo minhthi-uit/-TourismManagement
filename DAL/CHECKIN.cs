@@ -34,5 +34,6 @@ namespace DAL
         public virtual ROOM ROOM { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHECKIN_DETAILS> CHECKIN_DETAILS { get; set; }
+        public virtual SERVICE SERVICE { get; set; }
     }
 }

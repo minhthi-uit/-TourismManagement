@@ -19,6 +19,5 @@ namespace DAL
         public string username { get; set; }
         public string pass { get; set; }
         public string permission { get; set; }
-        public int Avatar { get; set; }
     }
 }
