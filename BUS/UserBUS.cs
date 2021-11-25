@@ -10,6 +10,18 @@ namespace BUS
     public class UserBUS
     {
         UserDAL userDAL = new UserDAL();
+        public dynamic getAll()
+        {
+            return userDAL.getAll();
+        }
+        public void updateAccount(ACCOUNT ac)
+        {
+            userDAL.updateAccount(ac);
+        }
+        public void deleteAccount(int ID)
+        {
+            userDAL.deleteAccount(ID);
+        }
         public int Login(string username, string password)
         {
             return userDAL.Login(username, password);

@@ -30,10 +30,10 @@ namespace DAL
         public virtual DbSet<BILL_DETAILS> BILL_DETAILS { get; set; }
         public virtual DbSet<CHECKIN> CHECKINs { get; set; }
         public virtual DbSet<CHECKIN_DETAILS> CHECKIN_DETAILS { get; set; }
+        public virtual DbSet<CUSTOMER> CUSTOMERs { get; set; }
         public virtual DbSet<CUSTOMER_TYPE> CUSTOMER_TYPE { get; set; }
         public virtual DbSet<ROOM> ROOMs { get; set; }
         public virtual DbSet<ROOMTYPE> ROOMTYPEs { get; set; }
-        public virtual DbSet<CUSTOMER> CUSTOMERs { get; set; }
         public virtual DbSet<SERVICE> SERVICEs { get; set; }
     }
 }

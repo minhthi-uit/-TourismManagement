@@ -27,8 +27,8 @@ namespace DAL
         public string customer_address { get; set; }
         public string customer_phone { get; set; }
     
-        public virtual CUSTOMER_TYPE CUSTOMER_TYPE1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHECKIN_DETAILS> CHECKIN_DETAILS { get; set; }
+        public virtual CUSTOMER_TYPE CUSTOMER_TYPE1 { get; set; }
     }
 }

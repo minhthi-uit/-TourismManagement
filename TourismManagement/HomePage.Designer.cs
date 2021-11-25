@@ -56,11 +56,12 @@
             this.btn1 = new System.Windows.Forms.Button();
             this.btnWindow = new System.Windows.Forms.Button();
             this.btnExit1 = new System.Windows.Forms.Button();
+            this.ucEmployee1 = new TourismManagement.ucEmployee();
+            this.ucCustomer1 = new TourismManagement.ucCustomer();
             this.ucSale1 = new TourismManagement.ucSale();
             this.ucBill1 = new TourismManagement.ucBill();
             this.ucHome1 = new TourismManagement.ucHome();
             this.ucRoom1 = new TourismManagement.ucRoom();
-            this.ucCustomer1 = new TourismManagement.ucCustomer();
             this.panel_top.SuspendLayout();
             this.panel_Menu.SuspendLayout();
             this.panel_left.SuspendLayout();
@@ -97,7 +98,7 @@
             this.label_tieude.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
             this.label_tieude.Location = new System.Drawing.Point(708, 15);
             this.label_tieude.Name = "label_tieude";
-            this.label_tieude.Size = new System.Drawing.Size(164, 32);
+            this.label_tieude.Size = new System.Drawing.Size(165, 32);
             this.label_tieude.TabIndex = 0;
             this.label_tieude.Text = "HomePage";
             // 
@@ -312,6 +313,7 @@
             this.btnSetting.Text = "  Setting";
             this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSetting.UseVisualStyleBackColor = true;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // panel_left
             // 
@@ -377,7 +379,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(861, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 25);
+            this.label1.Size = new System.Drawing.Size(310, 26);
             this.label1.TabIndex = 17;
             this.label1.Text = "TOURISM MANAGEMENT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -445,6 +447,20 @@
             this.btnExit1.UseVisualStyleBackColor = true;
             this.btnExit1.Click += new System.EventHandler(this.btnExit1_Click);
             // 
+            // ucEmployee1
+            // 
+            this.ucEmployee1.Location = new System.Drawing.Point(467, 117);
+            this.ucEmployee1.Name = "ucEmployee1";
+            this.ucEmployee1.Size = new System.Drawing.Size(1616, 956);
+            this.ucEmployee1.TabIndex = 26;
+            // 
+            // ucCustomer1
+            // 
+            this.ucCustomer1.Location = new System.Drawing.Point(467, 113);
+            this.ucCustomer1.Name = "ucCustomer1";
+            this.ucCustomer1.Size = new System.Drawing.Size(1616, 956);
+            this.ucCustomer1.TabIndex = 25;
+            // 
             // ucSale1
             // 
             this.ucSale1.Location = new System.Drawing.Point(467, 114);
@@ -474,19 +490,13 @@
             this.ucRoom1.Size = new System.Drawing.Size(1616, 956);
             this.ucRoom1.TabIndex = 21;
             // 
-            // ucCustomer1
-            // 
-            this.ucCustomer1.Location = new System.Drawing.Point(467, 113);
-            this.ucCustomer1.Name = "ucCustomer1";
-            this.ucCustomer1.Size = new System.Drawing.Size(1616, 956);
-            this.ucCustomer1.TabIndex = 25;
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1080);
             this.ControlBox = false;
+            this.Controls.Add(this.ucEmployee1);
             this.Controls.Add(this.ucCustomer1);
             this.Controls.Add(this.ucSale1);
             this.Controls.Add(this.ucBill1);
@@ -547,5 +557,6 @@
         private ucBill ucBill1;
         private ucSale ucSale1;
         private ucCustomer ucCustomer1;
+        private ucEmployee ucEmployee1;
     }
 }

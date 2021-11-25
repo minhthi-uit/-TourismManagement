@@ -128,3 +128,35 @@ C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\Touris
 C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucEmployee.resources
 C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.fRentRoom.resources
 C:\Users\User\Source\Repos\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.fPayBill.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\TourismManagement.exe.config
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\TourismManagement.exe
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\TourismManagement.pdb
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\BUS.dll
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\DAL.dll
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\BUS.pdb
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\BUS.dll.config
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\DAL.pdb
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\DAL.dll.config
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.csproj.AssemblyReference.cache
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucCustomer.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucEmployee.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucRoom.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucBill.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.CustomerManagement.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucHome.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.HomePage.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.fPayBill.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.Properties.Resources.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.fRentRoom.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.ucSale.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.Service.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.SinIn.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.SIGNUP.resources
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.csproj.GenerateResource.cache
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.exe
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.pdb
