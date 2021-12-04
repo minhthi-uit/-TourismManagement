@@ -26,6 +26,7 @@ namespace DAL
         }
     
         public virtual DbSet<ACCOUNT> ACCOUNTs { get; set; }
+        public virtual DbSet<AMOUNT> AMOUNTs { get; set; }
         public virtual DbSet<BILL> BILLs { get; set; }
         public virtual DbSet<BILL_DETAILS> BILL_DETAILS { get; set; }
         public virtual DbSet<CHECKIN> CHECKINs { get; set; }

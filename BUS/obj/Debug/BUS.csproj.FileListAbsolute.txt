@@ -62,3 +62,4 @@ C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\BUS\obj\Debug\BUS.csproj.As
 C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\BUS\obj\Debug\BUS.dll
 C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\BUS\obj\Debug\BUS.pdb
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\BUS\obj\Debug\BUS.csproj.CopyComplete

@@ -24,6 +24,7 @@ namespace DAL
         public int id_checkin { get; set; }
         public System.DateTime date_start { get; set; }
         public string id_room { get; set; }
+        public Nullable<int> id_service { get; set; }
         public Nullable<decimal> money_checkin { get; set; }
         public Nullable<double> type_ratioMAX { get; set; }
         public Nullable<int> number_customer { get; set; }
@@ -32,8 +33,8 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BILL_DETAILS> BILL_DETAILS { get; set; }
         public virtual ROOM ROOM { get; set; }
+        public virtual SERVICE SERVICE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHECKIN_DETAILS> CHECKIN_DETAILS { get; set; }
-        public virtual SERVICE SERVICE { get; set; }
     }
 }

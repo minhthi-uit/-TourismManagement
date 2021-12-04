@@ -160,3 +160,4 @@ C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug
 C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.exe
 C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.pdb
+C:\Users\ASUS\OneDrive\Máy tính\-TourismManagement\TourismManagement\obj\Debug\TourismManagement.PrintBill.resources

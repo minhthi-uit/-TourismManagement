@@ -53,9 +53,13 @@
     <Compile Include="ACCOUNT.cs">
       <DependentUpon>QLDuLich.tt</DependentUpon>
     </Compile>
+    <Compile Include="AMOUNT.cs">
+      <DependentUpon>QLDuLich.tt</DependentUpon>
+    </Compile>
     <Compile Include="BILL.cs">
       <DependentUpon>QLDuLich.tt</DependentUpon>
     </Compile>
+    <Compile Include="BillDAL.cs" />
     <Compile Include="BILL_DETAILS.cs">
       <DependentUpon>QLDuLich.tt</DependentUpon>
     </Compile>

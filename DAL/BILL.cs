@@ -21,10 +21,11 @@ namespace DAL
         }
     
         public int id_bill { get; set; }
-        public string bill_name { get; set; }
-        public string bill_address { get; set; }
+        public Nullable<System.DateTime> date_end { get; set; }
         public string total_money { get; set; }
+        public Nullable<int> id_customer { get; set; }
     
+        public virtual CUSTOMER CUSTOMER { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BILL_DETAILS> BILL_DETAILS { get; set; }
     }

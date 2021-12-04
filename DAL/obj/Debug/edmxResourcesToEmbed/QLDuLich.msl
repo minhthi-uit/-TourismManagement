@@ -12,13 +12,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="AMOUNTs">
+      <EntityTypeMapping TypeName="QLDuLichModel.AMOUNT">
+        <MappingFragment StoreEntitySet="AMOUNT">
+          <ScalarProperty Name="id_amount" ColumnName="id_amount" />
+          <ScalarProperty Name="customer_ratio" ColumnName="customer_ratio" />
+          <ScalarProperty Name="max_customer" ColumnName="max_customer" />
+          <ScalarProperty Name="amount_surchage" ColumnName="amount_surchage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="BILLs">
       <EntityTypeMapping TypeName="QLDuLichModel.BILL">
         <MappingFragment StoreEntitySet="BILL">
           <ScalarProperty Name="id_bill" ColumnName="id_bill" />
-          <ScalarProperty Name="bill_name" ColumnName="bill_name" />
-          <ScalarProperty Name="bill_address" ColumnName="bill_address" />
+          <ScalarProperty Name="date_end" ColumnName="date_end" />
           <ScalarProperty Name="total_money" ColumnName="total_money" />
+          <ScalarProperty Name="id_customer" ColumnName="id_customer" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -38,6 +48,7 @@
           <ScalarProperty Name="id_checkin" ColumnName="id_checkin" />
           <ScalarProperty Name="date_start" ColumnName="date_start" />
           <ScalarProperty Name="id_room" ColumnName="id_room" />
+          <ScalarProperty Name="id_service" ColumnName="id_service" />
           <ScalarProperty Name="money_checkin" ColumnName="money_checkin" />
           <ScalarProperty Name="type_ratioMAX" ColumnName="type_ratioMAX" />
           <ScalarProperty Name="number_customer" ColumnName="number_customer" />
@@ -79,21 +90,21 @@
       <EntityTypeMapping TypeName="QLDuLichModel.ROOM">
         <MappingFragment StoreEntitySet="ROOM">
           <ScalarProperty Name="id_room" ColumnName="id_room" />
-          <ScalarProperty Name="room_type" ColumnName="room_type" />
-          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="room_name" ColumnName="room_name" />
           <ScalarProperty Name="statuss" ColumnName="statuss" />
-          <ScalarProperty Name="price_per_day" ColumnName="price_per_day" />
-          <ScalarProperty Name="price_per_month" ColumnName="price_per_month" />
           <ScalarProperty Name="room_address" ColumnName="room_address" />
           <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="roomtype_id" ColumnName="roomtype_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ROOMTYPEs">
       <EntityTypeMapping TypeName="QLDuLichModel.ROOMTYPE">
         <MappingFragment StoreEntitySet="ROOMTYPE">
+          <ScalarProperty Name="roomtype_id" ColumnName="roomtype_id" />
           <ScalarProperty Name="room_type" ColumnName="room_type" />
-          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="price_per_day" ColumnName="price_per_day" />
+          <ScalarProperty Name="price_per_month" ColumnName="price_per_month" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

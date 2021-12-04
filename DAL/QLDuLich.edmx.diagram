@@ -4,26 +4,28 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2823dd1db3114b94bd97147c23add79e" Name="Diagram1">
-        <EntityTypeShape EntityType="QLDuLichModel.ACCOUNT" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDuLichModel.BILL" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDuLichModel.BILL_DETAILS" Width="1.5" PointX="7.5" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDuLichModel.CHECKIN" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDuLichModel.CHECKIN_DETAILS" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDuLichModel.CUSTOMER" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDuLichModel.CUSTOMER_TYPE" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDuLichModel.ROOM" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDuLichModel.ROOMTYPE" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLDuLichModel.SERVICE" Width="1.5" PointX="7.5" PointY="10.75" IsExpanded="true" />
-        <AssociationConnector Association="QLDuLichModel.FK__BILL_DETA__id_bi__4CA06362" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDuLichModel.FK__BILL_DETA__id_ch__4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDuLichModel.FK__CHECKIN__id_room__403A8C7D" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDuLichModel.FK__CHECKIN_D__id_ch__46E78A0C" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDuLichModel.FK__SERVICE__id_serv__5070F446" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDuLichModel.FK__CHECKIN_D__custo__45F365D3" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDuLichModel.FK__CHECKIN_D__id_cu__47DBAE45" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDuLichModel.FK__CUSTOMER__custom__4316F928" ManuallyRouted="false" />
-        <AssociationConnector Association="QLDuLichModel.FK__ROOM__room_type__3B75D760" ManuallyRouted="false" />
+      <Diagram DiagramId="2ddb17eb8ffe4620a66860e331b1052d" Name="Diagram1">
+        <EntityTypeShape EntityType="QLDuLichModel.ACCOUNT" Width="1.5" PointX="7.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDuLichModel.AMOUNT" Width="1.5" PointX="7.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDuLichModel.BILL" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDuLichModel.BILL_DETAILS" Width="1.5" PointX="7.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDuLichModel.CHECKIN" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDuLichModel.CHECKIN_DETAILS" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDuLichModel.CUSTOMER" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDuLichModel.CUSTOMER_TYPE" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDuLichModel.ROOM" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDuLichModel.ROOMTYPE" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDuLichModel.SERVICE" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="QLDuLichModel.FK__BILL__id_custome__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDuLichModel.FK__BILL_DETA__id_bi__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDuLichModel.FK__BILL_DETA__id_ch__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDuLichModel.FK__CHECKIN__id_room__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDuLichModel.FK__CHECKIN__id_serv__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDuLichModel.FK__CHECKIN_D__id_ch__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDuLichModel.FK__CHECKIN_D__custo__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDuLichModel.FK__CHECKIN_D__id_cu__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDuLichModel.FK__CUSTOMER__custom__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDuLichModel.FK__ROOM__roomtype_i__3C69FB99" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

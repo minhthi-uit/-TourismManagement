@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillBUS.cs" />
     <Compile Include="CustomerBUS.cs" />
     <Compile Include="HomeBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

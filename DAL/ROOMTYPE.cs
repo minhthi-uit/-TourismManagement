@@ -20,8 +20,10 @@ namespace DAL
             this.ROOMs = new HashSet<ROOM>();
         }
     
+        public int roomtype_id { get; set; }
         public string room_type { get; set; }
-        public Nullable<decimal> price { get; set; }
+        public decimal price_per_day { get; set; }
+        public decimal price_per_month { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ROOM> ROOMs { get; set; }

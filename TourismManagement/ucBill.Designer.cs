@@ -61,11 +61,12 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.dgvListOfCustomer = new System.Windows.Forms.DataGridView();
+            this.dgvListOfBill = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListOfCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListOfBill)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -186,6 +187,7 @@
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(150, 30);
             this.txtType.TabIndex = 13;
+            this.txtType.Text = " ";
             // 
             // txtIDCustomer
             // 
@@ -304,6 +306,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnRefresh);
             this.groupBox2.Controls.Add(this.btnPrint);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.txtNameApartmentSearch);
@@ -335,6 +338,7 @@
             this.btnPrint.Text = "Print Bill";
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnSearch
             // 
@@ -350,6 +354,7 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtNameApartmentSearch
             // 
@@ -405,27 +410,42 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "ID Bill";
             // 
-            // dgvListOfCustomer
+            // dgvListOfBill
             // 
-            this.dgvListOfCustomer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvListOfCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListOfCustomer.Location = new System.Drawing.Point(19, 29);
-            this.dgvListOfCustomer.Name = "dgvListOfCustomer";
-            this.dgvListOfCustomer.RowHeadersWidth = 51;
-            this.dgvListOfCustomer.RowTemplate.Height = 24;
-            this.dgvListOfCustomer.Size = new System.Drawing.Size(1259, 441);
-            this.dgvListOfCustomer.TabIndex = 3;
+            this.dgvListOfBill.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvListOfBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListOfBill.Location = new System.Drawing.Point(19, 29);
+            this.dgvListOfBill.Name = "dgvListOfBill";
+            this.dgvListOfBill.RowHeadersWidth = 51;
+            this.dgvListOfBill.RowTemplate.Height = 24;
+            this.dgvListOfBill.Size = new System.Drawing.Size(1357, 441);
+            this.dgvListOfBill.TabIndex = 3;
+            this.dgvListOfBill.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListOfBill_CellClick);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dgvListOfCustomer);
+            this.groupBox3.Controls.Add(this.dgvListOfBill);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(132, 460);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1295, 493);
+            this.groupBox3.Size = new System.Drawing.Size(1396, 493);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List Of Bill";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Location = new System.Drawing.Point(60, 356);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(93, 46);
+            this.btnRefresh.TabIndex = 134;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // ucBill
             // 
@@ -440,7 +460,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListOfCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListOfBill)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -459,7 +479,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dgvListOfCustomer;
+        private System.Windows.Forms.DataGridView dgvListOfBill;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -482,5 +502,6 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.TextBox txtApartmentMoney;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

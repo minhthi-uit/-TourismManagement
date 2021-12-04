@@ -14,12 +14,19 @@ namespace DAL
     
     public partial class SERVICE
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SERVICE()
+        {
+            this.CHECKINs = new HashSet<CHECKIN>();
+        }
+    
         public int id_service { get; set; }
         public string service_name { get; set; }
         public Nullable<int> quantity { get; set; }
         public Nullable<double> unit_price { get; set; }
         public Nullable<double> into_money { get; set; }
     
-        public virtual CHECKIN CHECKIN { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHECKIN> CHECKINs { get; set; }
     }
 }

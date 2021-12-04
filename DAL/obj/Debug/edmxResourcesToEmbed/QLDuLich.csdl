@@ -10,15 +10,25 @@
     <Property Name="pass" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="permission" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
+  <EntityType Name="AMOUNT">
+    <Key>
+      <PropertyRef Name="id_amount" />
+    </Key>
+    <Property Name="id_amount" Type="Int32" Nullable="false" />
+    <Property Name="customer_ratio" Type="Double" />
+    <Property Name="max_customer" Type="Int32" />
+    <Property Name="amount_surchage" Type="Int32" />
+  </EntityType>
   <EntityType Name="BILL">
     <Key>
       <PropertyRef Name="id_bill" />
     </Key>
     <Property Name="id_bill" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="bill_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="bill_address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="date_end" Type="DateTime" Precision="0" />
     <Property Name="total_money" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="BILL_DETAILS" Relationship="Self.FK__BILL_DETA__id_bi__4CA06362" FromRole="BILL" ToRole="BILL_DETAILS" />
+    <Property Name="id_customer" Type="Int32" />
+    <NavigationProperty Name="CUSTOMER" Relationship="Self.FK__BILL__id_custome__4E88ABD4" FromRole="BILL" ToRole="CUSTOMER" />
+    <NavigationProperty Name="BILL_DETAILS" Relationship="Self.FK__BILL_DETA__id_bi__5165187F" FromRole="BILL" ToRole="BILL_DETAILS" />
   </EntityType>
   <EntityType Name="BILL_DETAILS">
     <Key>
@@ -29,8 +39,8 @@
     <Property Name="id_checkin" Type="Int32" Nullable="false" />
     <Property Name="date_number" Type="Int32" />
     <Property Name="surchage_ratio" Type="Double" />
-    <NavigationProperty Name="BILL" Relationship="Self.FK__BILL_DETA__id_bi__4CA06362" FromRole="BILL_DETAILS" ToRole="BILL" />
-    <NavigationProperty Name="CHECKIN" Relationship="Self.FK__BILL_DETA__id_ch__4D94879B" FromRole="BILL_DETAILS" ToRole="CHECKIN" />
+    <NavigationProperty Name="BILL" Relationship="Self.FK__BILL_DETA__id_bi__5165187F" FromRole="BILL_DETAILS" ToRole="BILL" />
+    <NavigationProperty Name="CHECKIN" Relationship="Self.FK__BILL_DETA__id_ch__52593CB8" FromRole="BILL_DETAILS" ToRole="CHECKIN" />
   </EntityType>
   <EntityType Name="CHECKIN">
     <Key>
@@ -39,14 +49,15 @@
     <Property Name="id_checkin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="date_start" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="id_room" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="id_service" Type="Int32" />
     <Property Name="money_checkin" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="type_ratioMAX" Type="Double" />
     <Property Name="number_customer" Type="Int32" />
     <Property Name="status_checkin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="BILL_DETAILS" Relationship="Self.FK__BILL_DETA__id_ch__4D94879B" FromRole="CHECKIN" ToRole="BILL_DETAILS" />
-    <NavigationProperty Name="ROOM" Relationship="Self.FK__CHECKIN__id_room__403A8C7D" FromRole="CHECKIN" ToRole="ROOM" />
-    <NavigationProperty Name="CHECKIN_DETAILS" Relationship="Self.FK__CHECKIN_D__id_ch__46E78A0C" FromRole="CHECKIN" ToRole="CHECKIN_DETAILS" />
-    <NavigationProperty Name="SERVICE" Relationship="Self.FK__SERVICE__id_serv__5070F446" FromRole="CHECKIN" ToRole="SERVICE" />
+    <NavigationProperty Name="BILL_DETAILS" Relationship="Self.FK__BILL_DETA__id_ch__52593CB8" FromRole="CHECKIN" ToRole="BILL_DETAILS" />
+    <NavigationProperty Name="ROOM" Relationship="Self.FK__CHECKIN__id_room__46E78A0C" FromRole="CHECKIN" ToRole="ROOM" />
+    <NavigationProperty Name="SERVICE" Relationship="Self.FK__CHECKIN__id_serv__45F365D3" FromRole="CHECKIN" ToRole="SERVICE" />
+    <NavigationProperty Name="CHECKIN_DETAILS" Relationship="Self.FK__CHECKIN_D__id_ch__4AB81AF0" FromRole="CHECKIN" ToRole="CHECKIN_DETAILS" />
   </EntityType>
   <EntityType Name="CHECKIN_DETAILS">
     <Key>
@@ -56,9 +67,9 @@
     <Property Name="id_checkin" Type="Int32" />
     <Property Name="id_customer" Type="Int32" />
     <Property Name="customer_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="CHECKIN" Relationship="Self.FK__CHECKIN_D__id_ch__46E78A0C" FromRole="CHECKIN_DETAILS" ToRole="CHECKIN" />
-    <NavigationProperty Name="CUSTOMER_TYPE1" Relationship="Self.FK__CHECKIN_D__custo__45F365D3" FromRole="CHECKIN_DETAILS" ToRole="CUSTOMER_TYPE" />
-    <NavigationProperty Name="CUSTOMER" Relationship="Self.FK__CHECKIN_D__id_cu__47DBAE45" FromRole="CHECKIN_DETAILS" ToRole="CUSTOMER" />
+    <NavigationProperty Name="CHECKIN" Relationship="Self.FK__CHECKIN_D__id_ch__4AB81AF0" FromRole="CHECKIN_DETAILS" ToRole="CHECKIN" />
+    <NavigationProperty Name="CUSTOMER_TYPE1" Relationship="Self.FK__CHECKIN_D__custo__49C3F6B7" FromRole="CHECKIN_DETAILS" ToRole="CUSTOMER_TYPE" />
+    <NavigationProperty Name="CUSTOMER" Relationship="Self.FK__CHECKIN_D__id_cu__4BAC3F29" FromRole="CHECKIN_DETAILS" ToRole="CUSTOMER" />
   </EntityType>
   <EntityType Name="CUSTOMER">
     <Key>
@@ -70,8 +81,9 @@
     <Property Name="customer_cmnd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="customer_address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="customer_phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="CHECKIN_DETAILS" Relationship="Self.FK__CHECKIN_D__id_cu__47DBAE45" FromRole="CUSTOMER" ToRole="CHECKIN_DETAILS" />
-    <NavigationProperty Name="CUSTOMER_TYPE1" Relationship="Self.FK__CUSTOMER__custom__4316F928" FromRole="CUSTOMER" ToRole="CUSTOMER_TYPE" />
+    <NavigationProperty Name="BILLs" Relationship="Self.FK__BILL__id_custome__4E88ABD4" FromRole="CUSTOMER" ToRole="BILL" />
+    <NavigationProperty Name="CHECKIN_DETAILS" Relationship="Self.FK__CHECKIN_D__id_cu__4BAC3F29" FromRole="CUSTOMER" ToRole="CHECKIN_DETAILS" />
+    <NavigationProperty Name="CUSTOMER_TYPE1" Relationship="Self.FK__CUSTOMER__custom__412EB0B6" FromRole="CUSTOMER" ToRole="CUSTOMER_TYPE" />
   </EntityType>
   <EntityType Name="CUSTOMER_TYPE">
     <Key>
@@ -79,31 +91,31 @@
     </Key>
     <Property Name="customer_type1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ratio" Type="Double" />
-    <NavigationProperty Name="CHECKIN_DETAILS" Relationship="Self.FK__CHECKIN_D__custo__45F365D3" FromRole="CUSTOMER_TYPE" ToRole="CHECKIN_DETAILS" />
-    <NavigationProperty Name="CUSTOMERs" Relationship="Self.FK__CUSTOMER__custom__4316F928" FromRole="CUSTOMER_TYPE" ToRole="CUSTOMER" />
+    <NavigationProperty Name="CHECKIN_DETAILS" Relationship="Self.FK__CHECKIN_D__custo__49C3F6B7" FromRole="CUSTOMER_TYPE" ToRole="CHECKIN_DETAILS" />
+    <NavigationProperty Name="CUSTOMERs" Relationship="Self.FK__CUSTOMER__custom__412EB0B6" FromRole="CUSTOMER_TYPE" ToRole="CUSTOMER" />
   </EntityType>
   <EntityType Name="ROOM">
     <Key>
       <PropertyRef Name="id_room" />
     </Key>
     <Property Name="id_room" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="room_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="notes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="room_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="statuss" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="price_per_day" Type="Double" />
-    <Property Name="price_per_month" Type="Double" />
     <Property Name="room_address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="area" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="CHECKINs" Relationship="Self.FK__CHECKIN__id_room__403A8C7D" FromRole="ROOM" ToRole="CHECKIN" />
-    <NavigationProperty Name="ROOMTYPE" Relationship="Self.FK__ROOM__room_type__3B75D760" FromRole="ROOM" ToRole="ROOMTYPE" />
+    <Property Name="roomtype_id" Type="Int32" />
+    <NavigationProperty Name="CHECKINs" Relationship="Self.FK__CHECKIN__id_room__46E78A0C" FromRole="ROOM" ToRole="CHECKIN" />
+    <NavigationProperty Name="ROOMTYPE" Relationship="Self.FK__ROOM__roomtype_i__3C69FB99" FromRole="ROOM" ToRole="ROOMTYPE" />
   </EntityType>
   <EntityType Name="ROOMTYPE">
     <Key>
-      <PropertyRef Name="room_type" />
+      <PropertyRef Name="roomtype_id" />
     </Key>
-    <Property Name="room_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
-    <NavigationProperty Name="ROOMs" Relationship="Self.FK__ROOM__room_type__3B75D760" FromRole="ROOMTYPE" ToRole="ROOM" />
+    <Property Name="roomtype_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="room_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="price_per_day" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="price_per_month" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="ROOMs" Relationship="Self.FK__ROOM__roomtype_i__3C69FB99" FromRole="ROOMTYPE" ToRole="ROOM" />
   </EntityType>
   <EntityType Name="SERVICE">
     <Key>
@@ -114,9 +126,21 @@
     <Property Name="quantity" Type="Int32" />
     <Property Name="unit_price" Type="Double" />
     <Property Name="into_money" Type="Double" />
-    <NavigationProperty Name="CHECKIN" Relationship="Self.FK__SERVICE__id_serv__5070F446" FromRole="SERVICE" ToRole="CHECKIN" />
+    <NavigationProperty Name="CHECKINs" Relationship="Self.FK__CHECKIN__id_serv__45F365D3" FromRole="SERVICE" ToRole="CHECKIN" />
   </EntityType>
-  <Association Name="FK__BILL_DETA__id_bi__4CA06362">
+  <Association Name="FK__BILL__id_custome__4E88ABD4">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="0..1" />
+    <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="id_customer" />
+      </Principal>
+      <Dependent Role="BILL">
+        <PropertyRef Name="id_customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BILL_DETA__id_bi__5165187F">
     <End Role="BILL" Type="Self.BILL" Multiplicity="1" />
     <End Role="BILL_DETAILS" Type="Self.BILL_DETAILS" Multiplicity="*" />
     <ReferentialConstraint>
@@ -128,7 +152,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BILL_DETA__id_ch__4D94879B">
+  <Association Name="FK__BILL_DETA__id_ch__52593CB8">
     <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="1" />
     <End Role="BILL_DETAILS" Type="Self.BILL_DETAILS" Multiplicity="*" />
     <ReferentialConstraint>
@@ -140,7 +164,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CHECKIN__id_room__403A8C7D">
+  <Association Name="FK__CHECKIN__id_room__46E78A0C">
     <End Role="ROOM" Type="Self.ROOM" Multiplicity="0..1" />
     <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="*" />
     <ReferentialConstraint>
@@ -152,7 +176,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CHECKIN_D__id_ch__46E78A0C">
+  <Association Name="FK__CHECKIN__id_serv__45F365D3">
+    <End Role="SERVICE" Type="Self.SERVICE" Multiplicity="0..1" />
+    <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICE">
+        <PropertyRef Name="id_service" />
+      </Principal>
+      <Dependent Role="CHECKIN">
+        <PropertyRef Name="id_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHECKIN_D__id_ch__4AB81AF0">
     <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="0..1" />
     <End Role="CHECKIN_DETAILS" Type="Self.CHECKIN_DETAILS" Multiplicity="*" />
     <ReferentialConstraint>
@@ -164,19 +200,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SERVICE__id_serv__5070F446">
-    <End Role="CHECKIN" Type="Self.CHECKIN" Multiplicity="1" />
-    <End Role="SERVICE" Type="Self.SERVICE" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="CHECKIN">
-        <PropertyRef Name="id_checkin" />
-      </Principal>
-      <Dependent Role="SERVICE">
-        <PropertyRef Name="id_service" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CHECKIN_D__custo__45F365D3">
+  <Association Name="FK__CHECKIN_D__custo__49C3F6B7">
     <End Role="CUSTOMER_TYPE" Type="Self.CUSTOMER_TYPE" Multiplicity="0..1" />
     <End Role="CHECKIN_DETAILS" Type="Self.CHECKIN_DETAILS" Multiplicity="*" />
     <ReferentialConstraint>
@@ -188,7 +212,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CHECKIN_D__id_cu__47DBAE45">
+  <Association Name="FK__CHECKIN_D__id_cu__4BAC3F29">
     <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="0..1" />
     <End Role="CHECKIN_DETAILS" Type="Self.CHECKIN_DETAILS" Multiplicity="*" />
     <ReferentialConstraint>
@@ -200,7 +224,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CUSTOMER__custom__4316F928">
+  <Association Name="FK__CUSTOMER__custom__412EB0B6">
     <End Role="CUSTOMER_TYPE" Type="Self.CUSTOMER_TYPE" Multiplicity="0..1" />
     <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="*" />
     <ReferentialConstraint>
@@ -212,20 +236,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ROOM__room_type__3B75D760">
-    <End Role="ROOMTYPE" Type="Self.ROOMTYPE" Multiplicity="1" />
+  <Association Name="FK__ROOM__roomtype_i__3C69FB99">
+    <End Role="ROOMTYPE" Type="Self.ROOMTYPE" Multiplicity="0..1" />
     <End Role="ROOM" Type="Self.ROOM" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ROOMTYPE">
-        <PropertyRef Name="room_type" />
+        <PropertyRef Name="roomtype_id" />
       </Principal>
       <Dependent Role="ROOM">
-        <PropertyRef Name="room_type" />
+        <PropertyRef Name="roomtype_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="QLDuLichEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="ACCOUNTs" EntityType="Self.ACCOUNT" />
+    <EntitySet Name="AMOUNTs" EntityType="Self.AMOUNT" />
     <EntitySet Name="BILLs" EntityType="Self.BILL" />
     <EntitySet Name="BILL_DETAILS" EntityType="Self.BILL_DETAILS" />
     <EntitySet Name="CHECKINs" EntityType="Self.CHECKIN" />
@@ -235,39 +260,43 @@
     <EntitySet Name="ROOMs" EntityType="Self.ROOM" />
     <EntitySet Name="ROOMTYPEs" EntityType="Self.ROOMTYPE" />
     <EntitySet Name="SERVICEs" EntityType="Self.SERVICE" />
-    <AssociationSet Name="FK__BILL_DETA__id_bi__4CA06362" Association="Self.FK__BILL_DETA__id_bi__4CA06362">
+    <AssociationSet Name="FK__BILL__id_custome__4E88ABD4" Association="Self.FK__BILL__id_custome__4E88ABD4">
+      <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
+      <End Role="BILL" EntitySet="BILLs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BILL_DETA__id_bi__5165187F" Association="Self.FK__BILL_DETA__id_bi__5165187F">
       <End Role="BILL" EntitySet="BILLs" />
       <End Role="BILL_DETAILS" EntitySet="BILL_DETAILS" />
     </AssociationSet>
-    <AssociationSet Name="FK__BILL_DETA__id_ch__4D94879B" Association="Self.FK__BILL_DETA__id_ch__4D94879B">
+    <AssociationSet Name="FK__BILL_DETA__id_ch__52593CB8" Association="Self.FK__BILL_DETA__id_ch__52593CB8">
       <End Role="CHECKIN" EntitySet="CHECKINs" />
       <End Role="BILL_DETAILS" EntitySet="BILL_DETAILS" />
     </AssociationSet>
-    <AssociationSet Name="FK__CHECKIN__id_room__403A8C7D" Association="Self.FK__CHECKIN__id_room__403A8C7D">
+    <AssociationSet Name="FK__CHECKIN__id_room__46E78A0C" Association="Self.FK__CHECKIN__id_room__46E78A0C">
       <End Role="ROOM" EntitySet="ROOMs" />
       <End Role="CHECKIN" EntitySet="CHECKINs" />
     </AssociationSet>
-    <AssociationSet Name="FK__CHECKIN_D__id_ch__46E78A0C" Association="Self.FK__CHECKIN_D__id_ch__46E78A0C">
-      <End Role="CHECKIN" EntitySet="CHECKINs" />
-      <End Role="CHECKIN_DETAILS" EntitySet="CHECKIN_DETAILS" />
-    </AssociationSet>
-    <AssociationSet Name="FK__SERVICE__id_serv__5070F446" Association="Self.FK__SERVICE__id_serv__5070F446">
-      <End Role="CHECKIN" EntitySet="CHECKINs" />
+    <AssociationSet Name="FK__CHECKIN__id_serv__45F365D3" Association="Self.FK__CHECKIN__id_serv__45F365D3">
       <End Role="SERVICE" EntitySet="SERVICEs" />
+      <End Role="CHECKIN" EntitySet="CHECKINs" />
     </AssociationSet>
-    <AssociationSet Name="FK__CHECKIN_D__custo__45F365D3" Association="Self.FK__CHECKIN_D__custo__45F365D3">
+    <AssociationSet Name="FK__CHECKIN_D__id_ch__4AB81AF0" Association="Self.FK__CHECKIN_D__id_ch__4AB81AF0">
+      <End Role="CHECKIN" EntitySet="CHECKINs" />
+      <End Role="CHECKIN_DETAILS" EntitySet="CHECKIN_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHECKIN_D__custo__49C3F6B7" Association="Self.FK__CHECKIN_D__custo__49C3F6B7">
       <End Role="CUSTOMER_TYPE" EntitySet="CUSTOMER_TYPE" />
       <End Role="CHECKIN_DETAILS" EntitySet="CHECKIN_DETAILS" />
     </AssociationSet>
-    <AssociationSet Name="FK__CHECKIN_D__id_cu__47DBAE45" Association="Self.FK__CHECKIN_D__id_cu__47DBAE45">
+    <AssociationSet Name="FK__CHECKIN_D__id_cu__4BAC3F29" Association="Self.FK__CHECKIN_D__id_cu__4BAC3F29">
       <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
       <End Role="CHECKIN_DETAILS" EntitySet="CHECKIN_DETAILS" />
     </AssociationSet>
-    <AssociationSet Name="FK__CUSTOMER__custom__4316F928" Association="Self.FK__CUSTOMER__custom__4316F928">
+    <AssociationSet Name="FK__CUSTOMER__custom__412EB0B6" Association="Self.FK__CUSTOMER__custom__412EB0B6">
       <End Role="CUSTOMER_TYPE" EntitySet="CUSTOMER_TYPE" />
       <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
     </AssociationSet>
-    <AssociationSet Name="FK__ROOM__room_type__3B75D760" Association="Self.FK__ROOM__room_type__3B75D760">
+    <AssociationSet Name="FK__ROOM__roomtype_i__3C69FB99" Association="Self.FK__ROOM__roomtype_i__3C69FB99">
       <End Role="ROOMTYPE" EntitySet="ROOMTYPEs" />
       <End Role="ROOM" EntitySet="ROOMs" />
     </AssociationSet>
