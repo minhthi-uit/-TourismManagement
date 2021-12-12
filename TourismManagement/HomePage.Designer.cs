@@ -56,12 +56,11 @@
             this.btn1 = new System.Windows.Forms.Button();
             this.btnWindow = new System.Windows.Forms.Button();
             this.btnExit1 = new System.Windows.Forms.Button();
-            this.ucEmployee1 = new TourismManagement.ucEmployee();
             this.ucCustomer1 = new TourismManagement.ucCustomer();
             this.ucSale1 = new TourismManagement.ucSale();
-            this.ucBill1 = new TourismManagement.ucBill();
             this.ucHome1 = new TourismManagement.ucHome();
             this.ucRoom1 = new TourismManagement.ucRoom();
+            this.ucEmployee1 = new TourismManagement.ucEmployee();
             this.panel_top.SuspendLayout();
             this.panel_Menu.SuspendLayout();
             this.panel_left.SuspendLayout();
@@ -447,13 +446,6 @@
             this.btnExit1.UseVisualStyleBackColor = true;
             this.btnExit1.Click += new System.EventHandler(this.btnExit1_Click);
             // 
-            // ucEmployee1
-            // 
-            this.ucEmployee1.Location = new System.Drawing.Point(467, 117);
-            this.ucEmployee1.Name = "ucEmployee1";
-            this.ucEmployee1.Size = new System.Drawing.Size(1616, 956);
-            this.ucEmployee1.TabIndex = 26;
-            // 
             // ucCustomer1
             // 
             this.ucCustomer1.Location = new System.Drawing.Point(467, 113);
@@ -467,13 +459,6 @@
             this.ucSale1.Name = "ucSale1";
             this.ucSale1.Size = new System.Drawing.Size(1616, 956);
             this.ucSale1.TabIndex = 24;
-            // 
-            // ucBill1
-            // 
-            this.ucBill1.Location = new System.Drawing.Point(467, 112);
-            this.ucBill1.Name = "ucBill1";
-            this.ucBill1.Size = new System.Drawing.Size(1616, 956);
-            this.ucBill1.TabIndex = 23;
             // 
             // ucHome1
             // 
@@ -490,6 +475,13 @@
             this.ucRoom1.Size = new System.Drawing.Size(1616, 956);
             this.ucRoom1.TabIndex = 21;
             // 
+            // ucEmployee1
+            // 
+            this.ucEmployee1.Location = new System.Drawing.Point(468, 113);
+            this.ucEmployee1.Name = "ucEmployee1";
+            this.ucEmployee1.Size = new System.Drawing.Size(1616, 956);
+            this.ucEmployee1.TabIndex = 26;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -499,7 +491,6 @@
             this.Controls.Add(this.ucEmployee1);
             this.Controls.Add(this.ucCustomer1);
             this.Controls.Add(this.ucSale1);
-            this.Controls.Add(this.ucBill1);
             this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.ucRoom1);
             this.Controls.Add(this.panel_top);
@@ -554,7 +545,7 @@
         private System.Windows.Forms.Button btnExit1;
         private ucRoom ucRoom1;
         private ucHome ucHome1;
-        private ucBill ucBill1;
+       
         private ucSale ucSale1;
         private ucCustomer ucCustomer1;
         private ucEmployee ucEmployee1;

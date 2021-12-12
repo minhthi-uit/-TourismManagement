@@ -36,6 +36,13 @@ namespace DAL
             aCCOUNT.permission = ac.permission;
             entities.SaveChanges();
         }
+        public void updatePassword(ACCOUNT ac)
+        {
+            ACCOUNT aCCOUNT = entities.ACCOUNTs.Find(ac.id_user);
+            aCCOUNT.username = ac.username;
+            aCCOUNT.pass = ac.pass;
+            entities.SaveChanges();
+        }
         public int Login(string username, string password)
         {
             var existuser = entities.ACCOUNTs.FirstOrDefault(m => m.username.Equals(username));
@@ -52,6 +59,18 @@ namespace DAL
         {
             entities.ACCOUNTs.Add(ac);
             entities.SaveChanges();
+        }
+        public bool isManager(int ID)
+        {
+            ACCOUNT aCCOUNT = entities.ACCOUNTs.Find(ID);
+            if (aCCOUNT.permission == "Manager")
+                return true;
+            else
+                return false;
+        }
+        public ACCOUNT getUserByID(int ID)
+        {
+            return entities.ACCOUNTs.Find(ID);
         }
     }
 }

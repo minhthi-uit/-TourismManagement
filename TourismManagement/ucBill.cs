@@ -15,6 +15,7 @@ namespace TourismManagement
     {
         BillBUS billBUS = new BillBUS();
         int BillID = 0;
+        CustomerBUS customerBUS = new CustomerBUS();
         public ucBill()
         {
             InitializeComponent();
@@ -87,5 +88,8 @@ namespace TourismManagement
         {
             LoadData();
         }
+      
+        
     }
+
 }

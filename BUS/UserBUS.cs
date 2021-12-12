@@ -7,6 +7,7 @@ using DAL;
 
 namespace BUS
 {
+    
     public class UserBUS
     {
         UserDAL userDAL = new UserDAL();
@@ -29,6 +30,18 @@ namespace BUS
         public void Addaccount(ACCOUNT ac)
         {
              userDAL.Addaccount(ac);
+        }
+        public ACCOUNT getUserByID(int ID)
+        {
+            return userDAL.getUserByID(ID);
+        }
+        public void updatePassword(ACCOUNT ac)
+        {
+            userDAL.updatePassword(ac);
+        }
+        public bool isManager(int ID)
+        {
+            return userDAL.isManager(ID);
         }
     }
 }

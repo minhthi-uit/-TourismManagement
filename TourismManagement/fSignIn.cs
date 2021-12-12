@@ -66,7 +66,7 @@ namespace TourismManagement
                        MessageBoxIcon.Information);
                     txtPassword.Text = "";
                     
-                    HomePage menu = new HomePage();
+                    HomePage menu = new HomePage(ID);
                     SinIn sinIn = new SinIn();
 
                     sinIn.Close();

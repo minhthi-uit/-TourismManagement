@@ -41,12 +41,12 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnRemoveChangePass = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txbUserName = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUpdateSecurity = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.txbReEnterPass = new System.Windows.Forms.TextBox();
@@ -194,30 +194,31 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnRemoveChangePass);
+            this.panel5.Controls.Add(this.btnClear);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.panel2);
-            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.btnUpdateSecurity);
             this.panel5.Controls.Add(this.panel4);
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.panel3);
             this.panel5.Location = new System.Drawing.Point(42, 51);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(563, 386);
+            this.panel5.Size = new System.Drawing.Size(585, 386);
             this.panel5.TabIndex = 38;
             // 
-            // btnRemoveChangePass
+            // btnClear
             // 
-            this.btnRemoveChangePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(101)))), ((int)(((byte)(132)))));
-            this.btnRemoveChangePass.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveChangePass.Location = new System.Drawing.Point(432, 327);
-            this.btnRemoveChangePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRemoveChangePass.Name = "btnRemoveChangePass";
-            this.btnRemoveChangePass.Size = new System.Drawing.Size(84, 39);
-            this.btnRemoveChangePass.TabIndex = 12;
-            this.btnRemoveChangePass.Text = "Clear";
-            this.btnRemoveChangePass.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(101)))), ((int)(((byte)(132)))));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(432, 327);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(84, 39);
+            this.btnClear.TabIndex = 12;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label7
             // 
@@ -228,7 +229,6 @@
             this.label7.Size = new System.Drawing.Size(374, 51);
             this.label7.TabIndex = 11;
             this.label7.Text = "Change Password";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel2
             // 
@@ -237,7 +237,7 @@
             this.panel2.Location = new System.Drawing.Point(33, 80);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(505, 57);
+            this.panel2.Size = new System.Drawing.Size(527, 57);
             this.panel2.TabIndex = 5;
             // 
             // label2
@@ -259,17 +259,18 @@
             this.txbUserName.Size = new System.Drawing.Size(279, 22);
             this.txbUserName.TabIndex = 1;
             // 
-            // button1
+            // btnUpdateSecurity
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(101)))), ((int)(((byte)(132)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(323, 327);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 39);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnUpdateSecurity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(101)))), ((int)(((byte)(132)))));
+            this.btnUpdateSecurity.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateSecurity.Location = new System.Drawing.Point(323, 327);
+            this.btnUpdateSecurity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdateSecurity.Name = "btnUpdateSecurity";
+            this.btnUpdateSecurity.Size = new System.Drawing.Size(84, 39);
+            this.btnUpdateSecurity.TabIndex = 9;
+            this.btnUpdateSecurity.Text = "Update";
+            this.btnUpdateSecurity.UseVisualStyleBackColor = false;
+            this.btnUpdateSecurity.Click += new System.EventHandler(this.btnUpdateSecurity_Click);
             // 
             // panel4
             // 
@@ -278,22 +279,22 @@
             this.panel4.Location = new System.Drawing.Point(33, 266);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(505, 57);
+            this.panel4.Size = new System.Drawing.Size(527, 57);
             this.panel4.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 15);
+            this.label6.Location = new System.Drawing.Point(3, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 25);
+            this.label6.Size = new System.Drawing.Size(219, 25);
             this.label6.TabIndex = 5;
-            this.label6.Text = "New Password";
+            this.label6.Text = "Re-enter new Password";
             // 
             // txbReEnterPass
             // 
-            this.txbReEnterPass.Location = new System.Drawing.Point(203, 15);
+            this.txbReEnterPass.Location = new System.Drawing.Point(245, 15);
             this.txbReEnterPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbReEnterPass.Name = "txbReEnterPass";
             this.txbReEnterPass.PasswordChar = '*';
@@ -307,7 +308,7 @@
             this.panel1.Location = new System.Drawing.Point(33, 142);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(505, 57);
+            this.panel1.Size = new System.Drawing.Size(527, 57);
             this.panel1.TabIndex = 6;
             // 
             // label8
@@ -336,7 +337,7 @@
             this.panel3.Location = new System.Drawing.Point(33, 204);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(505, 57);
+            this.panel3.Size = new System.Drawing.Size(527, 57);
             this.panel3.TabIndex = 7;
             // 
             // label9
@@ -345,9 +346,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(7, 15);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(178, 25);
+            this.label9.Size = new System.Drawing.Size(147, 25);
             this.label9.TabIndex = 5;
-            this.label9.Text = "Re-enter Password";
+            this.label9.Text = " New Password";
             // 
             // txbNewPass
             // 
@@ -400,11 +401,11 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnRemoveChangePass;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txbUserName;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUpdateSecurity;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txbReEnterPass;
         private System.Windows.Forms.Panel panel1;

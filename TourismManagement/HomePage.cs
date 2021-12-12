@@ -7,23 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
+using DAL;
 
 namespace TourismManagement
 {
     public partial class HomePage : Form
     {
-        public HomePage()
+
+
+        UserBUS userBUS = new UserBUS();
+        
+        public class getID
+        {
+            static public int UserID;
+            
+        }
+        public HomePage(int ID)
         {
             InitializeComponent();
+            getID.UserID = ID;
         
-
+           
             ucRoom1.Visible = false;
             ucHome1.Visible = false;
-            ucBill1.Visible = false;
+            //ucBill1.Visible = false;
             ucSale1.Visible = false;
             ucCustomer1.Visible = false;
-            ucEmployee1.Visible = false;
+           ucEmployee1.Visible = false;
         }
 
     
@@ -39,7 +50,7 @@ namespace TourismManagement
   
             ucRoom1.Visible = false;
             ucSale1.Visible = false;
-            ucBill1.Visible=false;
+            //ucBill1.Visible=false;
             ucCustomer1.Visible = false;
             ucEmployee1.Visible = false;
         }
@@ -54,11 +65,11 @@ namespace TourismManagement
 
 
             ucHome1.Visible = false;
-            ucBill1.Visible = false;
+            //ucBill1.Visible = false;
             ucRoom1.Visible = true;
             ucSale1.Visible = false;
             ucCustomer1.Visible = false;
-            ucEmployee1.Visible = false;
+           ucEmployee1.Visible = false;
 
         }
 
@@ -94,10 +105,10 @@ namespace TourismManagement
 
             ucRoom1.Visible = false;
             ucHome1.Visible = false;         
-            ucBill1.Visible = true;
+            //ucBill1.Visible = true;
             ucSale1.Visible = false;
             ucCustomer1.Visible = false;
-            ucEmployee1.Visible = false;
+           ucEmployee1.Visible = false;
         }
 
         private void btnRevenue_Click(object sender, EventArgs e)
@@ -110,8 +121,13 @@ namespace TourismManagement
 
             ucRoom1.Visible = false;
             ucHome1.Visible = false;
-            ucBill1.Visible = false;
-            ucSale1.Visible = true;
+            //ucBill1.Visible = false;
+            if(userBUS.isManager(getID.UserID)==true)
+            {
+                ucSale1.Visible = true;
+
+            }
+            else MessageBox.Show("Bạn không có quyền truy cập vào khu vực này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             ucCustomer1.Visible = false;
             ucEmployee1.Visible = false;
 
@@ -127,7 +143,7 @@ namespace TourismManagement
 
             ucRoom1.Visible = false;
             ucHome1.Visible = false;
-            ucBill1.Visible = false;
+            //ucBill1.Visible = false;
             ucSale1.Visible = false;
             ucCustomer1.Visible = true;
             ucEmployee1.Visible = false;
@@ -143,10 +159,15 @@ namespace TourismManagement
 
             ucRoom1.Visible = false;
             ucHome1.Visible = false;
-            ucBill1.Visible = false;
+            //ucBill1.Visible = false;
             ucSale1.Visible = false;
             ucCustomer1.Visible = false;
-            ucEmployee1.Visible = true;
+            //if (userBUS.isManager(getID.UserID) == true)
+            //{
+                ucEmployee1.Visible = true;
+            //}
+            //else MessageBox.Show("Bạn không có quyền truy cập vào khu vực này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
     }
 }
